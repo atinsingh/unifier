@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'dashboards/alpha', pathMatch: 'full' },
+  { path: '', redirectTo: 'unifier/home', pathMatch: 'full' },
   { path: '**', redirectTo: 'pages/page-404' }
 ];
 

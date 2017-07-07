@@ -65,9 +65,9 @@
 
 .cat__menu-left__logo {
     width: 17.85rem;
-    height: 4.64rem;
+    height: 4.55rem;
     display: inline-block;
-    background: #0D1E32;
+    background: #00264d;
     padding: 1rem 1.28rem;
 }
 
@@ -119,11 +119,11 @@
     color: #ffffff;
 }
 
-.cat__menu-left__submenu--toggled.cat__menu-left__item > a:after {
+/*.cat__menu-left__submenu--toggled.cat__menu-left__item > a:after {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
-}
+}*/
 
 .cat__menu-left__submenu--toggled.cat__menu-left__item > .cat__menu-left__icon {
     color: #ffffff;
@@ -135,14 +135,14 @@
 }
 
 .cat__menu-left__list--root {
-    margin: 1.42rem 0;
+    margin: 0;
 }
-
+/*
 .cat__menu-left__divider {
-    background: #393749;
+    background: #0190fe;
     height: 1px;
     margin: 0.71rem 1.42rem;
-}
+}*/
 
 .cat__menu-left__item > a {
     position: relative;
@@ -152,13 +152,33 @@
     color: #b8beca;
 }
 
-.cat__menu-left__item > a > .badge {
-    margin-top: 0.21rem;
-}
+
 
 .cat__menu-left__item--active > a, .cat__menu-left__item:hover > a, .cat__menu-left__item:active > a, .cat__menu-left__item:focus > a {
-    background: #0e0b20;
     color: #ffffff;
+    -moz-box-shadow: 0px 2px 7px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 2px 7px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 7px rgba(0,0,0,0.25);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=180, Color='#333333')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=180, Color='#333333');
+}
+
+.cat__menu-left__item--active::before, .cat__menu-left__item--active::after {
+     content:"";
+    position:absolute;
+    width:20px;
+    height:50%;
+    left:100%;
+}
+
+.cat__menu-left__item--active::before {
+    top:0;
+    background: linear-gradient(to right top, red 50%, transparent 50%);
+}
+
+.cat__menu-left__item--active::after {
+    bottom:0;
+    background: linear-gradient(to right bottom, red 50%, transparent 50%);
 }
 
 .cat__menu-left__item--active > a > .cat__menu-left__icon, .cat__menu-left__item:hover > a > .cat__menu-left__icon, .cat__menu-left__item:active > a > .cat__menu-left__icon, .cat__menu-left__item:focus > a > .cat__menu-left__icon {
@@ -193,9 +213,9 @@
     top: 0;
     right: 0;
     width: 3.57rem;
-    height: 4.64rem;
+    height: 4.51rem;
     cursor: pointer;
-    background: #0D1E32;
+    background: #00264d;
     padding: 1.64rem 0.14rem 0 0;
     text-align: center;
     -webkit-user-select: none;

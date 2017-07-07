@@ -1,86 +1,86 @@
-/////////////////////////////////////////////////////////////////////////////////////////
-// "menu-right" module scripts
-$(function(){
+// /////////////////////////////////////////////////////////////////////////////////////////
+// // "menu-right" module scripts
+// $(function(){
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // toggle right menu
+//     /////////////////////////////////////////////////////////////////////////////////////////
+//     // toggle right menu
 
-    $('.cat__menu-right__action--menu-toggle').on('click', function(){
-        $('body').toggleClass('cat__menu-right--visible');
-    });
-
-
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // custom scroll init
-
-    if (!(/Mobi/.test(navigator.userAgent)) && jQuery().jScrollPane) {
-        $('.cat__menu-right').each(function () {
-            $(this).jScrollPane({
-                contentWidth: '0px',
-                autoReinitialise: true,
-                autoReinitialiseDelay: 100
-            });
-            var api = $(this).data('jsp'),
-                throttleTimeout;
-            $(window).bind('resize', function () {
-                if (!throttleTimeout) {
-                    throttleTimeout = setTimeout(function () {
-                        api.reinitialise();
-                        throttleTimeout = null;
-                    }, 50);
-                }
-            });
-        });
-    }
+//     $('.cat__menu-right__action--menu-toggle').on('click', function(){
+//         $('body').toggleClass('cat__menu-right--visible');
+//     });
 
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // options scripts
+//     /////////////////////////////////////////////////////////////////////////////////////////
+//     // custom scroll init
 
-    $('.cat__menu-right--example-option').each(function(){
+//     if (!(/Mobi/.test(navigator.userAgent)) && jQuery().jScrollPane) {
+//         $('.cat__menu-right').each(function () {
+//             $(this).jScrollPane({
+//                 contentWidth: '0px',
+//                 autoReinitialise: true,
+//                 autoReinitialiseDelay: 100
+//             });
+//             var api = $(this).data('jsp'),
+//                 throttleTimeout;
+//             $(window).bind('resize', function () {
+//                 if (!throttleTimeout) {
+//                     throttleTimeout = setTimeout(function () {
+//                         api.reinitialise();
+//                         throttleTimeout = null;
+//                     }, 50);
+//                 }
+//             });
+//         });
+//     }
 
-        var inputs = $(this).find('input'),
-            buttons = $(this).find('.btn');
 
-        // detect current options and set active buttons
-        var found = false;
-        inputs.each(function(){
+//     /////////////////////////////////////////////////////////////////////////////////////////
+//     // options scripts
 
-            if ($('body').hasClass($(this).val())) {
-                $(this).parent().trigger('click');
-                found = true;
-            }
+//     $('.cat__menu-right--example-option').each(function(){
 
-        });
-        if (!found) {
-            $(this).find('input[value=""]').parent().trigger('click');
-            $('.cat__menu-right .jspPane').css({top: 0})
-        }
+//         var inputs = $(this).find('input'),
+//             buttons = $(this).find('.btn');
 
-        // change options on click
-        $(this).find('.btn').on('click', function(){
-            var removeClasses = '',
-                addClass = $(this).find('input').val();
+//         // detect current options and set active buttons
+//         var found = false;
+//         inputs.each(function(){
 
-            buttons.removeClass('active');
-            $(this).addClass('active');
+//             if ($('body').hasClass($(this).val())) {
+//                 $(this).parent().trigger('click');
+//                 found = true;
+//             }
 
-            inputs.each(function(){
-                removeClasses += $(this).val() + ' ';
-            });
+//         });
+//         if (!found) {
+//             $(this).find('input[value=""]').parent().trigger('click');
+//             $('.cat__menu-right .jspPane').css({top: 0})
+//         }
 
-            $('body').removeClass(removeClasses).addClass(addClass);
+//         // change options on click
+//         $(this).find('.btn').on('click', function(){
+//             var removeClasses = '',
+//                 addClass = $(this).find('input').val();
 
-            if ($(this).find('input').attr('name') == 'options-colorful' && $(this).find('input').val() == 'cat__menu-left--colorful') {
-                $('body').trigger('removeColorfulClasses');
-                $('body').trigger('setColorfulClasses');
-            }
+//             buttons.removeClass('active');
+//             $(this).addClass('active');
 
-            if ($(this).find('input').attr('name') == 'options-colorful' && $(this).find('input').val() == '') {
-                $('body').trigger('removeColorfulClasses');
-            }
-        });
+//             inputs.each(function(){
+//                 removeClasses += $(this).val() + ' ';
+//             });
 
-    });
+//             $('body').removeClass(removeClasses).addClass(addClass);
 
-});
+//             if ($(this).find('input').attr('name') == 'options-colorful' && $(this).find('input').val() == 'cat__menu-left--colorful') {
+//                 $('body').trigger('removeColorfulClasses');
+//                 $('body').trigger('setColorfulClasses');
+//             }
+
+//             if ($(this).find('input').attr('name') == 'options-colorful' && $(this).find('input').val() == '') {
+//                 $('body').trigger('removeColorfulClasses');
+//             }
+//         });
+
+//     });
+
+// });
