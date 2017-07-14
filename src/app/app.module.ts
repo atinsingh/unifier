@@ -10,10 +10,9 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { TopBarComponent} from './components/top-bar/top-bar.component';
 import { MenuLeftComponent } from './components/menu-left/menu-left.component';
-import { MenuRightComponent } from './components/menu-right/menu-right.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 import { StructureModule } from './structure/structure.module';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
 declare var NProgress: any;
 
@@ -22,8 +21,7 @@ declare var NProgress: any;
         AppComponent,
         TopBarComponent,
         MenuLeftComponent,
-        MenuRightComponent,
-        FooterComponent
+        SearchbarComponent
     ],
     imports: [
         BrowserModule,

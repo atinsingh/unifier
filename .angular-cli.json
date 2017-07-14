@@ -21,7 +21,6 @@
       "styles": [
         "assets/preloader.css",
         "assets/vendors/by_bower/bootstrap/dist/css/bootstrap.min.css",
-        "assets/vendors/by_bower/jscrollpane/style/jquery.jscrollpane.css",
         "assets/vendors/by_bower/ladda/dist/ladda-themeless.min.css",
         "assets/vendors/by_bower/bootstrap-select/dist/css/bootstrap-select.min.css",
         "assets/vendors/by_bower/select2/dist/css/select2.min.css",
@@ -61,7 +60,6 @@
         "assets/vendors/by_bower/jquery-ui/jquery-ui.min.js",
         "assets/vendors/by_bower/bootstrap/dist/js/bootstrap.min.js",
         "assets/vendors/by_bower/jquery-mousewheel/jquery.mousewheel.min.js",
-        "assets/vendors/by_bower/jscrollpane/script/jquery.jscrollpane.min.js",
         "assets/vendors/by_bower/spin.js/spin.js",
         "assets/vendors/by_bower/ladda/dist/ladda.min.js",
         "assets/vendors/by_bower/bootstrap-select/dist/js/bootstrap-select.min.js",

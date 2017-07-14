@@ -3,11 +3,11 @@ import { CommonModule }  from '@angular/common';
 import { Routes, RouterModule }  from '@angular/router';
 
 import { Dashboard } from './dashboard.page';
+import { AccountcardComponent } from './accountcard/accountcard.component';
 
 
 export const routes: Routes = [
   { path: 'unifier/home', component: Dashboard  }
-  //{ path: 'dashboards/beta', component: DashboardsBeta },
 ];
 
 @NgModule({
@@ -16,7 +16,8 @@ export const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-    Dashboard
+    Dashboard,
+    AccountcardComponent
   ]
 
 })

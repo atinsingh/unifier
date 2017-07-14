@@ -239,38 +239,6 @@
     background: transparent;
 }
 
-.cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--primary:hover:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--primary.cat__menu-left__submenu--toggled:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--primary.cat__menu-left__item--active:before {
-    background-color: #0190fe;
-}
-
-.cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--secondary:hover:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--secondary.cat__menu-left__submenu--toggled:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--secondary.cat__menu-left__item--active:before {
-    background-color: #6a7a84;
-}
-
-.cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--default:hover:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--default.cat__menu-left__submenu--toggled:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--default.cat__menu-left__item--active:before {
-    background-color: #acb7bf;
-}
-
-.cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--info:hover:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--info.cat__menu-left__submenu--toggled:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--info.cat__menu-left__item--active:before {
-    background-color: #0887c9;
-}
-
-.cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--success:hover:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--success.cat__menu-left__submenu--toggled:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--success.cat__menu-left__item--active:before {
-    background-color: #46be8a;
-}
-
-.cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--warning:hover:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--warning.cat__menu-left__submenu--toggled:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--warning.cat__menu-left__item--active:before {
-    background-color: #f39834;
-}
-
-.cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--danger:hover:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--danger.cat__menu-left__submenu--toggled:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--danger.cat__menu-left__item--active:before {
-    background-color: #fb434a;
-}
-
-.cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--yellow:hover:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--yellow.cat__menu-left__submenu--toggled:before, .cat__menu-left__list--root > .cat__menu-left__item.cat__menu-left--colorful--yellow.cat__menu-left__item--active:before {
-    background-color: yellow;
-}
-
 @media (max-width: 767px) {
     .cat__menu-left__backdrop {
         position: fixed;
