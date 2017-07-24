@@ -7,16 +7,23 @@
                     </div>
                     <h6 class="mb-0 text-black">
                         <strong>
-                          {{customerData.fistname}}  {{customerData.lastname}} | PIN {{customerData.pin}} | Address: <span class="blue-txt"> {{customerData.address}}</span>
-                        </strong>
+                          {{customerData.fistname}}  {{customerData.lastname}} | PIN {{customerData.pin}} | Address
+                        </strong>  <span class="blue-txt"> {{customerData.address}}</span>
                     </h6>
+                  
                 </div>
-                <div class="card-block">
-                    <div class="row">
-                        <div class="col-xl-7">
+            <div class="card-block">
+                <div class="row no-gutters">
+                        <div class="col-lg-4 col-xs-12 ">
+                            <app-account-detail [customerData]="customerData" ></app-account-detail>
                         </div>
-                        <div class="col-xl-5">
+                        <div class="col-lg-5 col-xs-12">
+                            <app-billing></app-billing>
                         </div>
-                    </div>
+                        <div class="col-lg-3 col-xs-12">
+                           <app-current-balance></app-current-balance>
+                        </div>
                 </div>
+            </div>
+
 </section>

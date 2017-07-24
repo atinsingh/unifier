@@ -1,7 +1,7 @@
 <div class="cat__top-bar__item">
       <div class="cat__top-bar__search">
-        <i class="icmn-search"><!-- --></i>
-        <input (input)="updateSearchTerm($event)" type="text" placeholder="Search account/customer..." />
+        <i (click)="updateSearchTerm()" class="icmn-search"><!-- --></i>
+        <input type="button" #searchTerm (submit)="updateSearchTerm()" type="text" placeholder="Search account/customer..." />
       </div>
-      {{searchTerm}}
+
 </div>

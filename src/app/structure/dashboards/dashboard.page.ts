@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 declare var $: any;
 declare var jQuery: any;
-declare var autosize: any;
+// declare var autosize: any;
 declare var Ladda: any;
 declare var Chartist: any;
 
 @Component({
   selector: 'cat-page',
-  templateUrl: './alpha.html'
+  templateUrl: './dashboard.page.html'
 })
 
 export class Dashboard implements OnInit {
@@ -123,7 +123,7 @@ export class Dashboard implements OnInit {
 
       ///////////////////////////////////////////////////////////
       // adjustable textarea
-      autosize($('.adjustable-textarea'));
+      // autosize($('.adjustable-textarea'));
 
       
     } );

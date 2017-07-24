@@ -1,6 +1,17 @@
-.card , .card-header{
+.card-header{
     background-color: #e1e1e1;
 }
 .blue-txt{
     color: blue;
+}
+.card {
+    padding: 5px;
+    background-color: #e1e1e1;
+}
+.card-block {
+    background: #fff;
+}
+
+.cat__core__sortable__collapse,.cat__core__sortable__uncollapse{
+    color: #0a0a0a;
 }

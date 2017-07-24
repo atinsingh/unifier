@@ -14,6 +14,7 @@ import { MenuLeftComponent } from './components/menu-left/menu-left.component';
 import { StructureModule } from './structure/structure.module';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 
+
 declare var NProgress: any;
 
 @NgModule({
@@ -21,7 +22,7 @@ declare var NProgress: any;
         AppComponent,
         TopBarComponent,
         MenuLeftComponent,
-        SearchbarComponent
+        SearchbarComponent,
     ],
     imports: [
         BrowserModule,
@@ -40,15 +41,15 @@ export class AppModule {
   constructor(private router: Router) {
     router.events.subscribe((event) => {
 
-      if(event instanceof NavigationStart) {
-        NProgress.start();
-      }
-
-      if(event instanceof NavigationEnd) {
-        setTimeout(function(){
-          NProgress.done();
-        }, 200);
-      }
+      // if(event instanceof NavigationStart) {
+      //   NProgress.start();
+      // }
+      //
+      // if(event instanceof NavigationEnd) {
+      //   setTimeout(function(){
+      //     NProgress.done();
+      //   }, 200);
+      // }
 
     });
   }

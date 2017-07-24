@@ -1,0 +1,17 @@
+.card-header {
+    border: none;
+}
+
+.divider {
+    height: 0.1rem;
+    background: #0a0a0a;
+    width: 75%;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+.balance{
+    font-size: 2rem;
+    color:#0AA5DF;
+}

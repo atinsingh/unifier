@@ -1,0 +1,15 @@
+.col-charges{
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    border-right: 2px solid silver;
+}
+.col-charges:last-child{
+    border-right:none ;
+}
+.col-charges > .title {
+    color: #4f4f4f;
+    font-size: 0.8rem;
+}
+.table {
+    font-size: 0.8rem;;
+}

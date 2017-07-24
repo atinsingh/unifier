@@ -21,22 +21,22 @@ export class MenuLeftComponent implements OnInit {
     //   /////////////////////////////////////////////////////////////////////////////////////////
     //   // submenu
 
-    //   $('.cat__menu-left__submenu > a').on('click', function(){
+      $('.cat__menu-left__submenu > a').on('click', function(){
 
-    //     if ($('body').hasClass('cat__config--vertical') || $('body').width() < 768) {
+        if ($('body').hasClass('cat__config--vertical') || $('body').width() < 768) {
 
-    //       var parent = $(this).parent(),
-    //         opened = $('.cat__menu-left__submenu--toggled');
+          var parent = $(this).parent(),
+            opened = $('.cat__menu-left__submenu--toggled');
 
-    //       if (!parent.hasClass('cat__menu-left__submenu--toggled') && !parent.parent().closest('.cat__menu-left__submenu').length)
-    //         opened.removeClass('cat__menu-left__submenu--toggled').find('> .cat__menu-left__list').slideUp(200);
+          if (!parent.hasClass('cat__menu-left__submenu--toggled') && !parent.parent().closest('.cat__menu-left__submenu').length)
+            opened.removeClass('cat__menu-left__submenu--toggled').find('> .cat__menu-left__list').slideUp(200);
 
-    //       parent.toggleClass('cat__menu-left__submenu--toggled');
-    //       parent.find('> .cat__menu-left__list').slideToggle(200);
+          parent.toggleClass('cat__menu-left__submenu--toggled');
+          parent.find('> .cat__menu-left__list').slideToggle(200);
 
-    //     }
+        }
 
-    //   });
+      });
 
       // remove submenu toggle class when viewport back to full view
       $(window).on('resize', function(){

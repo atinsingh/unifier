@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-header">
+                BILLING DETAILS
+    </div>
+
+<div class="card-block">
+  <div class="row">
+    <div class="col">
+      Last Bill Amt
+    </div>
+    <div class="col">
+      {{billingData.billing_info.last_billed_amount}}
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      Past Due Balance
+    </div>
+    <div class="col">
+      {{billingData.billing_info.past_due_balance}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Last Payments
+    </div>
+    <div class="col">
+      {{billingData.last_payment[0].amount}}
+      <button class="moredetails" id="morepayment"> > </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      Next Bill Date
+    </div>
+    <div class="col">
+      {{billingData.billing_info.next_bill_cycle}}
+    </div>
+  </div>
+</div>
+</div>

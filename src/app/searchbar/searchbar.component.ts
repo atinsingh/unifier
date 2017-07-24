@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'search-bar',
@@ -7,14 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchbarComponent implements OnInit {
   
-  searchTerm ="";
+  @ViewChild('searchTerm') searchTerm :ElementRef;
 
-  constructor() { }
+  constructor(private router:Router) { }
   
   ngOnInit() {
   }
 
-  updateSearchTerm(event){
-   this.searchTerm = event.target.value;
-  }
+  updateSearchTerm(){
+      console.log(this.searchTerm.nativeElement.value);
+      this.router.navigate(['search', this.searchTerm.nativeElement.value]);
+ }
 }

@@ -1,0 +1,93 @@
+<!-- START: tables/datatables -->
+<section class="card">
+  <div class="card-header">
+      <div class="pull-right cat__core__sortable__control">
+          <i class="icmn-minus mr-2 cat__core__sortable__collapse" data-toggle="tooltip" data-placement="left" title="" data-original-title="Collapse"></i>
+          <i class="icmn-plus mr-2 cat__core__sortable__uncollapse" data-toggle="tooltip" data-placement="left" title="" data-original-title="Uncollapse"></i>
+          <!-- <i class="icmn-cross cat__core__sortable__close" data-toggle="tooltip" data-placement="left" title="" data-original-title="Remove"></i> -->
+      </div>
+
+      <div class="row">
+          <div class="col-lg-3">
+            <span class="cat__core__title">
+                <strong><span class="lnr lnr-smartphone"></span> EQUIPMENT</strong>
+            </span>
+          </div>
+    <div class="col-lg-9 col-xs-12">
+      <div class="row">
+          <div class="col col-charges">
+              <div class="align-bottom">
+                  <strong>Total Charges :</strong>
+              </div>
+          </div>
+          <div class="col col-charges">
+          <div class="title">
+            PIC Monthly Fee
+          </div>
+          <div>
+            {{getTotalPICMonthlyfee()}}
+          </div>
+        </div>
+
+        <div class="col col-charges">
+            <div class="title">
+                PIC Remain Charges
+            </div>
+            <div>
+                {{getTotalPICRemainingCharges()}}
+            </div>
+        </div>
+          <div class="col col-charges">
+              <div class="title">
+                  Protection Plan Charges
+              </div>
+              <div>
+                  {{getTotalProtectionPlanCharges()}}
+              </div>
+          </div>
+      </div>
+    </div>
+      </div>
+  </div>
+  <div class="card-block">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="mb-5">
+          <table class="table table-hover" id="example1" width="100%">
+            <thead>
+            <tr>
+              <th>MDN</th>
+              <th>Name</th>
+              <th>PIN</th>
+              <th>Device Description</th>
+              <th>RIC Start Date</th>
+              <th>RIC End Date</th>
+              <th>PIC Monthly Fee</th>
+              <th>RIC Remaning Charges</th>
+              <th>Protection Plan Charges</th>
+              <th>Upgrade Date Eligibility</th>
+              <th>DevF MEID</th>
+            </tr>
+            </thead>
+             <tbody>
+            <tr  *ngFor="let equipment of equipmentJson.equipment_details" (click)="onSelectMdn(equipment.mdn)">
+                <td>{{equipment.mdn}}</td>
+                <td>{{equipment.first_name}}  {{equipment.last_name}}</td>
+                <td>{{equipment.pin}}</td>
+                <td>{{equipment.device_description}}</td>
+                <td>{{equipment.ric_start_date}}</td>
+                <td>{{equipment.ric_end_date}}</td>
+                <td>{{equipment.ric_monthly_fee}}</td>
+                <td>{{equipment.ric_balance}}</td>
+                <td>{{equipment.protection_plan_charges}}</td>
+                <td>{{equipment.upgrade_eligiblity_date}}</td>
+                <td>{{equipment.devfin_meid}}</td>
+             </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: tables/datatables -->
