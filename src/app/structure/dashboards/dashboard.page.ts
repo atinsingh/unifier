@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 declare var $: any;
 declare var jQuery: any;
-// declare var autosize: any;
+
 declare var Ladda: any;
-declare var Chartist: any;
 
 @Component({
-  selector: 'cat-page',
+  selector: 'app-dashboard',
   templateUrl: './dashboard.page.html'
 })
 
@@ -22,7 +21,7 @@ export class Dashboard implements OnInit {
 
       ///////////////////////////////////////////////////////////
       // jquery ui sortable
-      $('#left-col, #right-col, #bottom-col').each(function(){
+      $('#row1, #row2, #row3-left,#row3-right').each(function(){
         $(this).sortable({
           // connect left and right containers
           connectWith: '.cat__core__sortable',
@@ -88,9 +87,6 @@ export class Dashboard implements OnInit {
 
       ///////////////////////////////////////////////////////////
       // datatables
-      $('#example1').DataTable({
-        responsive: true
-      });
 
       
       ///////////////////////////////////////////////////////////

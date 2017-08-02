@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {AccountService} from "../../../shared/account.service";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 declare var $: any;
 declare var jQuery: any;
 
@@ -9,60 +11,55 @@ declare var jQuery: any;
 })
 export class BillingComponent implements OnInit {
 
-  billingData =  {
-      billing_info : {
-          last_billed_amount : 439.12,
-          past_due_balance : 270.00,
-          current_balance: 638.23,
-          balance_due_date : "May/05/17",
-          last_billed_date : "Aug/05/17",
-          next_bill_cycle : "Sep/05/17"
-      }
-      ,
-      last_payment :[
-          {
-              date: "May/05/17",
-              amount:120.00
-          },
-          {
-              date:null,
-              amount:null
-          },
-          {
-              date:null,
-              amount:null
-          }
-      ]
+  billingData ;
 
-  }
-
-  constructor() { }
+  constructor(private accountService:AccountService, private route:ActivatedRoute, private cdRef:ChangeDetectorRef) { }
 
   ngOnInit() {
-      let me  = this;
-     $(function () {
-         let content = '';
-         for(let i = 0 ; i<me.billingData.last_payment.length;i++){
-             content =  content+ '<div class="row"><div class = "col col-payment">'+me.billingData.last_payment[i].date+'</div><div class="col col-payment">'+me.billingData.last_payment[i].amount+'</div></div>';
-         }
-         $('#morepayment').popover(
-             {
-                 placement: 'right',
-                 toggle: 'popover',
-                 title: 'LAST 3 PAYMENTS',
-                 html: true,
-                 content: content
-             }
-         );
-    //   $("[data-toggle=popover]").popover();
-    //   // $("[data-toggle=popover-hover]").popover({
-    //   //   trigger: 'hover'
-    //   // });
-    //   //
-    //   // $("[data-toggle=tooltip]").tooltip();
-    //
-     });
-
+      this.route.params.subscribe(
+          (params:Params)=>{
+              this.updateData();
+          }
+      )
+      this.updateData();
   }
 
+
+  updateData(){
+      this.accountService.retrieveBillingData().subscribe(
+          (response)=>{
+              this.billingData = response.json();
+              console.log("Got Billing Data"+JSON.stringify(response.json()));
+              this.addPopover(this.billingData);
+              this.accountService.updateBilling(this.billingData);
+          }
+      );
+
+      this.cdRef.detectChanges();
+  }
+
+  addPopover(billingData){
+      // $(function () {
+      //     let content = '';
+      //     for(let i = 0 ; i<billingData.last_payment.length;i++){
+      //         content =  content+ '<div class="row"><div class = "col col-payment">'+billingData.last_payment[i].date+'</div><div class="col col-payment">'+billingData.last_payment[i].amount+'</div></div>';
+      //     }
+      //     $('#morepayment').popover(
+      //         {
+      //             placement: 'right',
+      //             toggle: 'popover',
+      //             title: 'LAST 3 PAYMENTS',
+      //             html: true,
+      //             content: content
+      //         }
+      //     );
+      //     //   $("[data-toggle=popover]").popover();
+      //     //   // $("[data-toggle=popover-hover]").popover({
+      //     //   //   trigger: 'hover'
+      //     //   // });
+      //     //   //
+      //     //   // $("[data-toggle=tooltip]").tooltip();
+      //     //
+      // });
+  }
 }

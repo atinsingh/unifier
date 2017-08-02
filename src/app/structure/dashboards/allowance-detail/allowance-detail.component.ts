@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {AccountService} from "../../../shared/account.service";
 declare var $: any;
 declare var jQuery: any;
 
@@ -10,18 +11,27 @@ declare var jQuery: any;
 })
 export class AllowanceDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private accountService:AccountService) { }
+
+  allowance;
 
   ngOnInit() {
+      this.accountService.getSelectedAllowancePeriod().subscribe(
+          (allowance)=>{
+              this.allowance = allowance;
+              this.updateChart();
+          }
+      );
 
-     (function() {
+  }
+
+  updateChart(){
+
           $("#circle").circliful({
               animationStep: 5,
               foregroundBorderWidth: 5,
               backgroundBorderWidth: 12,
               percent: 85
           });
-      })();
-  }
-
+   }
 }

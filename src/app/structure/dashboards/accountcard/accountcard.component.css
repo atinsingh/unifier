@@ -1,17 +1,40 @@
 .card-header{
-    background-color: #e1e1e1;
+    background-color: #F8F8F8;
+    border-bottom: none;
 }
+
 .blue-txt{
-    color: blue;
+    color: #4990E2;
 }
 .card {
     padding: 5px;
-    background-color: #e1e1e1;
+    background-color: #F8F8F8;
 }
+
 .card-block {
-    background: #fff;
+    padding-top: 0;
+    padding-bottom: 0.3rem;
 }
 
 .cat__core__sortable__collapse,.cat__core__sortable__uncollapse{
     color: #0a0a0a;
+}
+
+.no-gutters > .col, .no-gutters > [class*="col-"]{
+    border: 1px solid #f9f9f9;
+    background-color: #fff;
+}
+
+.text-black{
+    line-height: 15px;
+}
+.cat__content{
+    background-color: white;
+}
+
+.bold-text{
+    font-weight: 800;
+}
+.m5{
+    margin-right: 0.3rem;
 }

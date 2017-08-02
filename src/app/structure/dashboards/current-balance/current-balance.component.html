@@ -1,22 +1,26 @@
-<div class="card">
-      <div class="card-header text-center">
+<div class="card text-center">
+      <div class="card-header ">
         CURRENT BALANCE
       </div>
     <div class="divider">
 
     </div>
 
-  <div class="card-block text-center">
+  <div *ngIf="billingData" class="card-block">
     <div class="row">
       <div class="col">
         <div>
-          <i class="fa fa-ticket fa-4x float-left"></i> <span class="">Balance</span>
+          <i class="fa fa-credit-card"></i> <span class="text-center">Balance</span>
         </div >
         <div class="balance">
-          $542.00
+          {{billingData.billing_info.current_balance|currency:'USD':'true'}}
         </div>
+      </div>
+    </div>
+    <div class="row ">
+          <div class="col curr-bal">
         <div class="balance-due">Balance Due Date</div>
-        <div class="balance-due-date">May/04/17</div>
+        <div class="balance-due-date">{{billingData.billing_info.balance_due_date}}</div>
       </div></div>
   </div>
 

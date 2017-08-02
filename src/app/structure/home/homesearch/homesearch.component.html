@@ -1,0 +1,70 @@
+<!--<div class="row">-->
+    <!--<div class="col-xs-12 col-lg-10 col-lg-offset-2 align-content-lg-center">-->
+            <!--<form class="form" (submit)="updateSearchTerm()">-->
+                <!--&lt;!&ndash;<i (click)="updateSearchTerm()" class="icmn-search">&lt;!&ndash; &ndash;&gt;</i>&ndash;&gt;-->
+                <!--<div class="form-control">-->
+                    <!--<input class="input input-group "  #searchTerm (submit)="updateSearchTerm()" type="text" placeholder="Search account/customer..." />-->
+                <!--</div>-->
+                <!--<div class="form-control">-->
+                    <!--<button type="submit" class="btn btn-info float-lg-right">SEARCH</button>-->
+                <!--</div>-->
+            <!--</form>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="panel vertical-center">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-12 col-xs-12">
+                <div id="imaginary_container">
+                    <form (submit)="updateSearchTerm()">
+                        <div class="input-group stylish-input-group">
+                            <input #searchTerm type="text" class="form-control"  placeholder="Search" />
+                            <span class="">
+                                    <button (click)="updateSearchTerm()" class="search-button" type="submit">
+                                        SEARCH
+                                    </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <br>
+    <div class="align-middle" style="background: whitesmoke">
+        <div class="row card-group">
+            <div class="card text-center">
+                <div class="icon" >
+                   <span class="lnr lnr-user fa-4x" ></span>
+                </div>
+                <div class="icon-text">
+                    Register a new Customer
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="icon" >
+                    <span class="lnr lnr-smartphone fa-4x"></span>
+                </div>
+                <div class="icon-text">
+                    Upgrade
+                </div>
+            </div>
+
+            <div class=" card text-center disabled">
+                <div class="icon" >
+                    <span class="lnr lnr-gift fa-4x"></span>
+                </div>
+                <div class="icon-text">
+                    Change Plan
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <div class="icon" >
+                    <i class="fa fa-cc-visa fa-4x"></i>
+                </div>
+                <div class="icon-text">
+                    Payment
+                </div>
+            </div>
+        </div>
+</div>

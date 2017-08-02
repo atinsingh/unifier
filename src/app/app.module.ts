@@ -10,9 +10,11 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { TopBarComponent} from './components/top-bar/top-bar.component';
 import { MenuLeftComponent } from './components/menu-left/menu-left.component';
-
 import { StructureModule } from './structure/structure.module';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import {SearchService} from "./shared/search.service";
+import {AccountService} from "./shared/account.service";
+
 
 
 declare var NProgress: any;
@@ -33,24 +35,24 @@ declare var NProgress: any;
         NgbModule.forRoot(),
         routing
     ],
-    providers: [],
+    providers: [SearchService,AccountService],
     bootstrap: [ AppComponent ]
 })
 
 export class AppModule {
   constructor(private router: Router) {
-    router.events.subscribe((event) => {
-
-      // if(event instanceof NavigationStart) {
-      //   NProgress.start();
-      // }
-      //
-      // if(event instanceof NavigationEnd) {
-      //   setTimeout(function(){
-      //     NProgress.done();
-      //   }, 200);
-      // }
-
-    });
+    // router.events.subscribe((event) => {
+    //
+    //   if(event instanceof NavigationStart) {
+    //     NProgress.start();
+    //   }
+    //
+    //   if(event instanceof NavigationEnd) {
+    //     setTimeout(function(){
+    //       NProgress.done();
+    //     }, 0);
+    //   }
+    //
+    // });
   }
 }

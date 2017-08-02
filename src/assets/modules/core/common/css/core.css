@@ -1,6 +1,15 @@
-/*  "CORE" MODULE STYLES */
+
+    /*  "CORE" MODULE STYLES */
 html {
     font-size: 14px;
+}
+
+button#morepayment.moredetails{
+    box-shadow: none !important;
+    border: none;
+    background: none;
+    color: #F16A7B;
+    vertical-align: top;
 }
 
 @media (max-width: 1199px) {
@@ -16,7 +25,7 @@ html {
 }
 
 body {
-    font-family: "PT Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #514d6a;
     background: #f2f4f8;
 }
@@ -41,23 +50,24 @@ a:hover, a:active, a:focus {
 
 input {
     outline: none !important;
-    font-family: "PT Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #514d6a;
 }
 
 button, input {
     -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 input[type=text], input[type=password], input[type=email], textarea {
     -webkit-appearance: none !important;
-       -moz-appearance: none !important;
-            appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
 }
 
 .cat__content {
-    padding: 1.42rem;
+    padding: 0.42rem 1.42rem 0.42rem 1.42rem;
+    background-color: whitesmoke;
 }
 
 @media (max-width: 767px) {
@@ -76,7 +86,7 @@ pre {
     color: #74708d;
     padding: 1.42rem;
     -webkit-border-radius: 3px;
-            border-radius: 3px;
+    border-radius: 3px;
     border: 1px solid #e4e9f0;
     background: #f2f4f8;
 }
@@ -85,15 +95,17 @@ pre.cat__core__pre--darken {
     background: #222034;
 }
 
+
+
 /*  CORE OPTIONS */
 .cat__config--superclean .cat__content {
-    padding: 0;
+    padding: 0.28rem;
 }
 
 .cat__config--superclean .card {
     border: none !important;
     -webkit-border-radius: 0 !important;
-            border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 
 .cat__config--superclean .cat__core__top-sidebar {
@@ -102,7 +114,7 @@ pre.cat__core__pre--darken {
 
 .cat__config--squared-corners .card, .cat__config--squared-corners .cat__footer, .cat__config--squared-corners .cat__core__widget {
     -webkit-border-radius: 0 !important;
-            border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 
 /*  CORE COMPONENTS & UTILITIES */
@@ -158,7 +170,7 @@ pre.cat__core__pre--darken {
     bottom: 2.85rem;
     right: 2.85rem;
     -webkit-border-radius: 5px;
-            border-radius: 5px;
+    border-radius: 5px;
     background: #eef0f4;
     color: #b8beca;
     text-align: center;
@@ -296,7 +308,7 @@ pre.cat__core__pre--darken {
     display: inline-block;
     overflow: hidden;
     -webkit-border-radius: 500px;
-            border-radius: 500px;
+    border-radius: 500px;
 }
 
 .cat__core__avatar img {
@@ -507,7 +519,7 @@ pre.cat__core__pre--darken {
     width: 1.14rem;
     height: 1.14rem;
     -webkit-border-radius: 100%;
-            border-radius: 100%;
+    border-radius: 100%;
     border: 4px solid #acb7bf;
     position: relative;
     top: 0.14rem;
@@ -564,10 +576,10 @@ pre.cat__core__pre--darken {
     font-size: 2.57rem;
     padding: 0.71rem 2.14rem;
     -webkit-box-sizing: content-box;
-       -moz-box-sizing: content-box;
-            box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
     -webkit-border-radius: 3px;
-            border-radius: 3px;
+    border-radius: 3px;
     background: #eef0f4;
     margin: 0.71rem;
 }
@@ -586,7 +598,7 @@ pre.cat__core__pre--darken {
     background-color: #ffffff;
     padding: 1.42rem;
     -webkit-border-radius: 3px;
-            border-radius: 3px;
+    border-radius: 3px;
     display: block;
 }
 
@@ -659,7 +671,7 @@ pre.cat__core__pre--darken {
 
 .cat__core__step--squared {
     -webkit-border-radius: 0;
-            border-radius: 0;
+    border-radius: 0;
 }
 
 @media (max-width: 991px) {
@@ -671,14 +683,14 @@ pre.cat__core__pre--darken {
 
 .card-header .cat__core__step {
     padding: 0.35rem 0 0.71rem 0;
-    margin-bottom: -0.86rem;
+    /*margin-bottom: -0.86rem;*/
     margin-top: 0rem;
     color: #74708d !important;
-    background-color: #ffffff !important;
-    border-bottom-width: 3px;
-    border-bottom-style: solid;
+    background-color: #F8F8F8!important;
+    /*border-bottom-width: 3px;
+    border-bottom-style: solid;*/
     -webkit-border-radius: 0;
-            border-radius: 0;
+    border-radius: 0;
 }
 
 .card-header .cat__core__step__digit {
@@ -735,21 +747,21 @@ pre.cat__core__pre--darken {
     color: #acb7bf;
     text-align: center;
     -webkit-border-radius: 0rem;
-            border-radius: 0rem;
+    border-radius: 0rem;
     padding: 0 1.07rem;
 }
 
 .cat__core__steps-inline .cat__core__step:first-child {
     border-right-width: 1px;
     -webkit-border-radius: 100px 0 0 100px;
-            border-radius: 100px 0 0 100px;
+    border-radius: 100px 0 0 100px;
     padding-left: 1.28rem;
 }
 
 .cat__core__steps-inline .cat__core__step:last-child {
     border-left-width: 0;
     -webkit-border-radius: 0 100px 100px 0;
-            border-radius: 0 100px 100px 0;
+    border-radius: 0 100px 100px 0;
     padding-right: 1.28rem;
 }
 

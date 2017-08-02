@@ -1,0 +1,37 @@
+.nav{
+    color: #a0a3a5;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    margin-top: 0;
+    border-bottom: 0;
+}
+
+.nav-item {
+    border-right: 0.1rem solid #a0a3a5;
+    margin-bottom: 0.3rem;
+}
+
+.nav-item a:hover {
+    border: 0;
+}
+.active_link {
+    color:#4990E2
+}
+
+.nav-item:last-child {
+    border-right: none;
+}
+
+.fa {
+    font-size: 1.4rem;
+    margin-right: 0.7rem;
+}
+
+.right-buttons {
+    width: 70%;
+}
+
+.justify-content-end>.nav-item {
+    border: none;
+}
+

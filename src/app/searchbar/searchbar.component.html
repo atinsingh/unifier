@@ -1,7 +1,9 @@
 <div class="cat__top-bar__item">
-      <div class="cat__top-bar__search">
-        <i (click)="updateSearchTerm()" class="icmn-search"><!-- --></i>
-        <input type="button" #searchTerm (submit)="updateSearchTerm()" type="text" placeholder="Search account/customer..." />
+      <div class="cat__top-bar__search" *ngIf="!searchHome">
+          <form (submit)="updateSearchTerm()">
+            <i (click)="updateSearchTerm()" class="icmn-search"><!-- --></i>
+            <input type="button" #searchTerm (submit)="updateSearchTerm()" type="text" placeholder="Search account/customer..." />
+          </form>
       </div>
 
 </div>

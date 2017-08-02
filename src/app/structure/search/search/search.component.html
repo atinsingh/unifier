@@ -1,2 +1,25 @@
-<h3>You are searching for {{term}}</h3>
+<div class="alert alert-danger" data-animation="true" *ngIf="invalid">Invalid MDN/Customer ID  : {{term}}</div>
+
+<div *ngIf="searchObj" class="row">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Customer ID</th>
+                <th> ID </th>
+                <th>Addresss</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr style="cursor: pointer" (click)="selectAccount(searchObj.customerid) ">
+            <td>{{searchObj.firstname}}</td>
+            <td>{{searchObj.lastname}}</td>
+            <td>{{searchObj.customerid}}</td>
+            <td>{{searchObj.id}}</td>
+            <td>{{searchObj.Address}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 

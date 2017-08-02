@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-lg-8">
+        <ul class="nav nav-tabs">
+
+          <li class="nav-item">
+            <a class="nav-link"  routerLinkActive="active_link"  [routerLink]="[accountId]">
+              <span class="fa fa-user-o"></span>
+              Customer
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class=" nav-link" routerLinkActive="active_link"   [routerLink]="['payment', accountId]">
+              <span class="fa fa-credit-card"></span>
+              Payment
+            </a>
+          </li>
+
+          <li class="nav-item">
+
+            <a disabled="" class="nav-link" [routerLinkActive]="active_link"  >
+              <span class="fa fa-plus-square-o"></span>
+              Add aceessory
+            </a>
+          </li>
+
+        </ul>
+    </div>
+    <div class="col-lg-4 text-right">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active">
+                    <img class="right-buttons" src="/assets/modules/core/img/chat.png">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <img class="right-buttons" src="/assets/modules/core/img/ticket.png">
+                </a>
+
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AccountService} from "../../../shared/account.service";
 
 @Component({
   selector: 'app-charges',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChargesComponent implements OnInit {
 
-  constructor() { }
+    mdn;
+    charges;
 
-  ngOnInit() {
-  }
+    constructor(private  accountService:AccountService) { }
 
+    ngOnInit() {
+
+      this.accountService.getSelectedMdn().subscribe(
+          (mdn)=>{
+              this.mdn=mdn;
+              this.accountService.retrieveCharges(mdn).subscribe(
+                  (response)=>{
+                      this.charges = response.json();
+                      this.selectChargesPeriod(this.charges[0]);
+
+                  }
+              )
+          }
+      );
+
+    }
+
+    selectChargesPeriod(charge){
+        this.accountService.updateChargePeriod(charge);
+    }
 }

@@ -163,13 +163,6 @@
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=180, Color='#333333');
 }
 
-.cat__menu-left__item--active::before, .cat__menu-left__item--active::after {
-     content:"";
-    position:absolute;
-    width:20px;
-    height:50%;
-    left:100%;
-}
 
 .cat__menu-left__item--active::before {
     top:0;

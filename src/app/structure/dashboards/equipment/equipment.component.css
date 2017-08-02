@@ -13,3 +13,39 @@
 .table {
     font-size: 0.8rem;;
 }
+.card-header{
+
+}
+.blue-txt{
+    color: blue;
+}
+.card {
+    padding: 1.25rem;
+    background-color: #F8F8F8;;
+}
+.card-block {
+    padding: 0rem;
+    padding-top: 0.5rem;
+    background-color: #F8F8F8;;
+}
+
+.card-header{
+    background: #fff;
+}
+.cat__core__sortable__collapse,.cat__core__sortable__uncollapse{
+    color: #0a0a0a;
+}
+.table {
+    padding: 0;
+    background: #fff;
+}
+
+.col-charges .currency-big {
+    color: #4990E2;
+    font-size: 2rem;
+    font-stretch: ultra-condensed;
+}
+.align-text-bottom{
+  margin-right: 0px;
+    padding-right: 0;
+}

@@ -7,6 +7,25 @@
 }
 
 .card-block{
-    padding: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
     background:#ffffff;
+    line-height: 2.3rem;
+}
+.card{
+    border: none;
+    color: #a0a3a5;
+}
+
+
+.left-title {
+    font-weight: bold;
+    color: #0a0a0a;
+}
+.moredetails{
+    margin-left: 1.4rem;
+    vertical-align: middle !important;
+
+}
+.fa-angle-right{
+    padding-left: 1rem;
 }

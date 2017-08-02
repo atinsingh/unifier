@@ -1,14 +1,17 @@
-<div class="row no-gutter">
+<div *ngIf="charge" class="row no-gutter">
   <div class="col">
      <div class="total-charges">Total Charges</div>
      <div class="total-details text-center">
        <i class="fa fa-money fa-4x float-left"></i>
        <div class="">total</div>
-       <div class="">$250.90</div>
+       <div class="">$ {{charge.total}}</div>
      </div>
-    <div class="charge-item">Monthly charge <span class="charge-item-number">$25.05</span> </div>
-    <div class="charge-item">Equipment charge <span class="charge-item-number">$25.05</span> </div>
-    <div class="charge-item">Surchages & fee <span class="charge-item-number">$25.05</span> </div>
-    <div class="charge-item">Goverment Tax & Fee <span class="charge-item-number">$25.05</span> </div>
+    <div class="charge-item">Monthly charge <span class="charge-item-number">$ {{charge.monthly}}</span> </div>
+    <div class="charge-item">Equipment charge <span class="charge-item-number">$ {{charge.equipment}}</span> </div>
+    <div class="charge-item">Surchages & fee <span class="charge-item-number">$ {{charge.surcharge}}</span> </div>
+    <div class="charge-item">Goverment Tax & Fee <span class="charge-item-number">${{charge.tax}}</span> </div>
   </div>
+</div>
+<div *ngIf="!charge">
+    Please select a period to view the details
 </div>

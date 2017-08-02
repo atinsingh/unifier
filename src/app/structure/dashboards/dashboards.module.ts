@@ -1,6 +1,8 @@
 import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
 import { Routes, RouterModule }  from '@angular/router';
+import {PopoverModule} from "ng2-popover";
+
 
 import { Dashboard } from './dashboard.page';
 import { AccountcardComponent } from './accountcard/accountcard.component';
@@ -15,13 +17,14 @@ import { ChargeDetailComponent } from './charge-detail/charge-detail.component';
 
 
 export const routes: Routes = [
-  { path: 'unifier/home', component: Dashboard  }
+  { path: 'dashboard', component: Dashboard  }
 ];
 
 @NgModule({
   imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
+      CommonModule,
+      PopoverModule,
+      RouterModule.forChild(routes)
   ],
   declarations: [
     Dashboard,

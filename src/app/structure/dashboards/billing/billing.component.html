@@ -3,9 +3,9 @@
                 BILLING DETAILS
     </div>
 
-<div class="card-block">
+<div *ngIf="billingData" class="card-block">
   <div class="row">
-    <div class="col">
+    <div class="col left-title">
       Last Bill Amt
     </div>
     <div class="col">
@@ -14,7 +14,7 @@
   </div>
 
   <div class="row">
-    <div class="col">
+    <div class="col left-title">
       Past Due Balance
     </div>
     <div class="col">
@@ -22,17 +22,31 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col left-title">
       Last Payments
     </div>
     <div class="col">
       {{billingData.last_payment[0].amount}}
-      <button class="moredetails" id="morepayment"> > </button>
+      <button [popover]="myPopover" style="cursor: pointer" class="moredetails" id="morepayment"> <i class="fa fa-2x fa-angle-right"></i> </button>
+
+      <popover-content #myPopover
+                       placement="auto right"
+                       title=""
+                       [animation]="true"
+                       [closeOnClickOutside]="true" >
+          <table class="table table-condensed">
+              <tbody>
+                  <tr *ngFor="let payment of billingData.last_payment" >
+                      <td>{{payment.date}}</td><td>{{payment.amount}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </popover-content>
     </div>
   </div>
 
   <div class="row">
-    <div class="col">
+    <div class="col left-title">
       Next Bill Date
     </div>
     <div class="col">

@@ -20,10 +20,11 @@
     "@angular/platform-browser": "latest",
     "@angular/platform-browser-dynamic": "latest",
     "@angular/router": "latest",
+    "@ng-bootstrap/ng-bootstrap": "latest",
     "core-js": "latest",
+    "ng2-popover": "0.0.14",
     "rxjs": "latest",
-    "zone.js": "latest",
-    "@ng-bootstrap/ng-bootstrap": "latest"
+    "zone.js": "latest"
   },
   "devDependencies": {
     "@angular/cli": "latest",

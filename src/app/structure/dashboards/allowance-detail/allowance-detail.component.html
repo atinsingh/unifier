@@ -1,4 +1,4 @@
-<div class="row no-gutter">
+<div  *ngIf="allowance" class="row no-gutter">
     <div class="col-7">
         <div class="row">
             <div class="col">
@@ -11,21 +11,23 @@
             </div>
             <div class="col text-center">
                 <div class="bigblue-text">
-                    20.00GB
+                    {{allowance.allowance}}
                 </div>
                 <div>Used</div>
-                <div>16.67GB</div>
+                <div>{{allowance.used}}</div>
                 <div>Remained</div>
-                <div>5.33 GB</div>
+                <div>{{allowance.remained}}</div>
             </div>
         </div>
     </div>
     <div class="col-5">
         <ul class="list">
-            <li class="list-group list-group-item">OfferName <span class="redtext">A</span> </li>
-            <li class="list-group list-group-item">remain days <span class="redtext">15</span>  </li>
-            <li class="list-group list-group-item">devices <span class="redtext">20</span> </li>
+            <li class="list-group list-group-item">OfferName <span class="redtext">{{allowance.offer_name}}</span> </li>
+            <li class="list-group list-group-item">Remain days <span class="redtext">{{allowance.remained}}</span>  </li>
+            <li class="list-group list-group-item">Devices <span class="redtext"></span> </li>
             <li class="list-group list-group-item">Benefits/Rewards</li>
         </ul>
     </div>
+
 </div>
+<div *ngIf="!allowance" class="">Please Click a Period to view Details</div>

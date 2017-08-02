@@ -1,8 +1,16 @@
 .account-details {
-    padding: 1rem;
-    line-height: 2.1rem;
-    border-right: 0.1rem solid salmon;
+    padding: 1rem 1rem 0rem 1rem;
+    line-height: 2.4rem;
+    color: #a0a3a5;
 }
 .cat__core__sortable__control{
+    color: #0a0a0a;
+}
+.card {
+    border: none;
+    padding-bottom: 0rem;
+
+}
+.left-title{
     color: #0a0a0a;
 }
