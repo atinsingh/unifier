@@ -6,6 +6,12 @@
     margin-bottom: 0.71rem;
 }
 
+.pagination {
+    float: right;
+    border-radius: 0 !important;
+
+}
+
 .pagination .page-link:hover, .pagination .page-link:focus {
     background: #acb7bf;
     color: #ffffff;
@@ -17,8 +23,9 @@
 }
 
 .pagination .page-item.active .page-link {
-    background: #0190fe;
-    border-color: #0190fe;
+    background: #4990e2;
+    border-color: #4990e2;
+    border-radius: 0 !important;
 }
 
 .pager li > a {
@@ -33,4 +40,9 @@
     background: #acb7bf;
     color: #ffffff;
     border-color: #acb7bf;
+}
+.dataTables_wrapper .dataTables_info{
+    color: #9b9b9b;
+    font-size: 12px;
+    padding-left: 0.4em;
 }

@@ -12,6 +12,40 @@ button#morepayment.moredetails{
     vertical-align: top;
 }
 
+ul.nav{
+    letter-spacing: 0 !important;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+
+}
+li.nav-link{
+    transition: none;
+    margin: 0;
+    padding: 0;
+}
+li.nav-link:active{
+    color: #0088ff;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 1em 3em 0.4em 0.6em;
+  border: 0px solid transparent !important;
+  margin: 0;
+}
+
+.fa.fa-plus-square-o {
+    margin-left:1.5em;
+}
+.nav-item {
+    border-right: 0.1rem solid #e7e7e7 !important;
+}
+
 @media (max-width: 1199px) {
     html {
         font-size: 13px;
@@ -67,7 +101,7 @@ input[type=text], input[type=password], input[type=email], textarea {
 
 .cat__content {
     padding: 0.42rem 1.42rem 0.42rem 1.42rem;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 @media (max-width: 767px) {
@@ -156,7 +190,7 @@ pre.cat__core__pre--darken {
 }
 
 .cat__core__sortable__control i {
-    color: #d2d9e5;
+    color: #979797;
     cursor: pointer;
 }
 

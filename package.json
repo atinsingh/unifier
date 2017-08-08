@@ -21,7 +21,10 @@
     "@angular/platform-browser-dynamic": "latest",
     "@angular/router": "latest",
     "@ng-bootstrap/ng-bootstrap": "latest",
+    "angular-datatables": "^4.1.1",
+    "angular-svg-round-progressbar": "^1.1.0",
     "core-js": "latest",
+    "datatables.net-select": "^1.2.2",
     "ng2-popover": "0.0.14",
     "rxjs": "latest",
     "zone.js": "latest"

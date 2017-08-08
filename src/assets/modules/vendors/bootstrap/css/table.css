@@ -1,7 +1,19 @@
 /* TABLE */
+
+
+/*.table{
+    table-layout: fixed;
+}*/
+
 .table thead th {
-    border-bottom: 1px solid #e4e9f0;
+    border: 1px solid #e4e9f0;
     outline: none !important;
+    font-size: 0.8rem;
+    color: #aba8b1;
+    font-weight: 400;
+    text-align: center;
+    padding: 2em 0 2em 0;
+
 }
 
 .table thead th:focus {
@@ -9,19 +21,24 @@
 }
 
 .table td, .table th {
-    border-color: #e4e9f0;
+    border: 1px solid #e4e9f0;
+    text-align: center;
+  /*  color: #aba8b1;*/
 }
 
 .table td:focus, .table th:focus {
     background-color: #e4e9f0;
+    color: #2b2e39;
+    font-weight: 400;
 }
 
 .table tbody tr:first-child td {
-    border-top: none;
+   /* border-top: none;*/
 }
 
 .table.table-hover tbody tr:hover {
     background: #f2f4f8;
+    color: #0d1e32;
 }
 
 .table tr.active, .table th.active {
@@ -67,4 +84,9 @@
 
 .table-inverse tr.active, .table-inverse th.active {
     background: #eef0f4;
+}
+
+.table.dataTable thead > tr > th.sorting{
+    padding-right: 0px;
+    
 }

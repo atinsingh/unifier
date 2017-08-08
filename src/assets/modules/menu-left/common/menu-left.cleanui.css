@@ -67,7 +67,7 @@
     width: 17.85rem;
     height: 4.55rem;
     display: inline-block;
-    background: #00264d;
+    background: #0d1e32;
     padding: 1rem 1.28rem;
 }
 
@@ -128,6 +128,10 @@
 .cat__menu-left__submenu--toggled.cat__menu-left__item > .cat__menu-left__icon {
     color: #ffffff;
 }
+.cat__menu-left__icon img{
+    height: 1.6em;
+    margin: 0 !important;
+}
 
 .cat__menu-left__list {
     list-style: none;
@@ -146,19 +150,19 @@
 
 .cat__menu-left__item > a {
     position: relative;
-    min-height: 3.21rem;
-    padding: 0.85rem 3.57rem 0.85rem 1.42rem;
+    min-height: 3.5rem;
+    padding: 1.2rem 3.57rem 0.85rem 1.42rem;
     display: block;
-    color: #b8beca;
+    color: #c7d2e7;
 }
 
 
 
 .cat__menu-left__item--active > a, .cat__menu-left__item:hover > a, .cat__menu-left__item:active > a, .cat__menu-left__item:focus > a {
     color: #ffffff;
-    -moz-box-shadow: 0px 2px 7px rgba(0,0,0,0.25);
-    -webkit-box-shadow: 0px 2px 7px rgba(0,0,0,0.25);
-    box-shadow: 0px 2px 7px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 2px 7px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 2px 7px rgba(0,0,0,0.05);
+    box-shadow: 0px 2px 7px rgba(0,0,0,0.05);
     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=180, Color='#333333')";
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=180, Color='#333333');
 }
@@ -208,7 +212,6 @@
     width: 3.57rem;
     height: 4.51rem;
     cursor: pointer;
-    background: #00264d;
     padding: 1.64rem 0.14rem 0 0;
     text-align: center;
     -webkit-user-select: none;

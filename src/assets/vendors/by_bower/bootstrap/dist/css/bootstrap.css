@@ -1,4 +1,4 @@
-/*!
+.mb-5li.nav-link/*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
@@ -75,7 +75,7 @@ strong {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 500;
 }
 
 code,
@@ -3825,10 +3825,7 @@ tbody.collapse.show {
   list-style: none;
 }
 
-.nav-link {
-  display: block;
-  padding: 0.5em 1em;
-}
+
 
 .nav-link:focus, .nav-link:hover {
   text-decoration: none;
@@ -3847,7 +3844,7 @@ tbody.collapse.show {
   margin-bottom: -1px;
 }
 
-.nav-tabs .nav-link {
+.nav-tabs {
   border: 1px solid transparent;
   border-top-right-radius: 0.25rem;
   border-top-left-radius: 0.25rem;
@@ -4443,10 +4440,10 @@ tbody.collapse.show {
   margin-left: 1.25rem;
 }
 
-.card > .list-group:first-child .list-group-item:first-child {
+/*.card > .list-group:first-child .list-group-item:first-child {
   border-top-right-radius: 0.25rem;
   border-top-left-radius: 0.25rem;
-}
+}*/
 
 .card > .list-group:last-child .list-group-item:last-child {
   border-bottom-right-radius: 0.25rem;

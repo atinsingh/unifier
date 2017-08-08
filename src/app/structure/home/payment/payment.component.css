@@ -1,0 +1,21 @@
+.card {
+    padding: 5px;
+    background-color: #F8F8F8;
+    border: 0;
+}
+
+.card-header {
+    background-color: #F8F8F8;
+}
+
+.card-block {
+    background: #ffffff;
+}
+.pay-area {
+    padding: 2rem;
+    border-left: 0.1rem dimgrey solid;
+}
+
+.card_data{
+    padding: 2rem;
+}

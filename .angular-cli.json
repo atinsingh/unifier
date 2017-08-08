@@ -25,6 +25,7 @@
         "assets/vendors/by_bower/circliful/css/jquery.circliful.css",
         "assets/vendors/by_bower/bootstrap-sweetalert/dist/sweetalert.css",
         "assets/vendors/by_hands/datatables/media/css/dataTables.bootstrap4.min.css",
+        "assets/vendors/by_bower/datatables.net-select-dt/css/select.dataTables.min.css",
         "assets/vendors/by_bower/nprogress/nprogress.css",
         "assets/vendors/by_bower/jquery-steps/demo/css/jquery.steps.css",
         "assets/vendors/by_bower/dropify/dist/css/dropify.min.css",
@@ -40,14 +41,12 @@
         "assets/modules/pages/common/pages.cleanui.css",
         "assets/modules/ecommerce/common/ecommerce.cleanui.css",
         "assets/modules/apps/common/apps.cleanui.css"
-
       ],
       "scripts": [
         "assets/vendors/by_bower/jquery/dist/jquery.js",
         "assets/vendors/by_bower/tether/dist/js/tether.min.js",
         "assets/vendors/by_bower/jquery-ui/jquery-ui.min.js",
         "assets/vendors/by_bower/bootstrap/dist/js/bootstrap.min.js",
-        "assets/vendors/by_bower/jquery-mousewheel/jquery.mousewheel.min.js",
         "assets/vendors/by_bower/spin.js/spin.js",
         "assets/vendors/by_bower/ladda/dist/ladda.min.js",
         "assets/vendors/by_bower/jquery-typeahead/dist/jquery.typeahead.min.js",
@@ -58,6 +57,7 @@
         "assets/vendors/by_hands/datatables/media/js/dataTables.bootstrap4.min.js",
         "assets/vendors/by_bower/datatables-fixedcolumns/js/dataTables.fixedColumns.js",
         "assets/vendors/by_bower/datatables-responsive/js/dataTables.responsive.js",
+        "assets/vendors/by_bower/datatables.net-select/js/dataTables.select.min.js",
         "assets/vendors/by_hands/editable-table/mindmup-editabletable.js",
         "assets/vendors/by_bower/peity/jquery.peity.min.js",
         "assets/vendors/by_bower/jquery-countTo/jquery.countTo.js",

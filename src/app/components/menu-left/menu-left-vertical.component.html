@@ -13,7 +13,7 @@
         <ul class="cat__menu-left__list cat__menu-left__list--root">
             <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
                 <a [routerLink]="['unifier/home']">
-                    <span class="cat__menu-left__icon icmn-home"></span>
+                    <span class="cat__menu-left__icon "><img src="assets/modules/menu-left//icons/home.png"></span>
                     Customer
                 </a>
             </li>
@@ -21,7 +21,7 @@
             <li class="cat__menu-left__divider"><!-- --></li>
             <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
                 <a href="javascript: void(0);">
-                    <span class="cat__menu-left__icon icmn-skype"></span>
+                    <span class="cat__menu-left__icon "><img src="assets/modules/menu-left//icons/line.png"></span>
                     Line
                 </a>
                 <ul class="cat__menu-left__list">
@@ -45,51 +45,56 @@
                             More..
                         </a>
                     </li>
-                  </ul>
+                </ul>
             </li>
             <li class="cat__menu-left__item cat__menu-left__list--root" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon"><i class="fa fa-2x fa-universal-access"></i> </span>
-                            Billing and Payment
-                        </a>
+                <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon"><!-- <i class="fa fa-2x fa-universal-access"></i> --> <img src="assets/modules/menu-left//icons/billing.png">
+                            </span>
+                    Billing and Payment
+                </a>
             </li>
 
             <li class="cat__menu-left__item cat__menu-left__list--root" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/products-catalog']">
-                            <span class="cat__menu-left__icon"><i class="fa fa-2x fa-universal-access"></i></span>
-                            Products Catalog
-                        </a>
+                <a [routerLink]="['ecommerce/products-catalog']">
+                    <span class="cat__menu-left__icon"><!-- <i class="fa fa-2x fa-universal-access"></i> --><img src="assets/modules/menu-left//icons/catalog.png"></span>
+                    Products Catalog
+                </a>
             </li>
 
             <li class="cat__menu-left__item cat__menu-left__list--root" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/product-details']">
-                            <span class="cat__menu-left__icon"><i class="fa fa-2x fa-universal-access"></i></span>
-                            Finance And Collections
-                        </a>
+                <a [routerLink]="['ecommerce/product-details']">
+                    <span class="cat__menu-left__icon"><!-- <i class="fa fa-2x fa-universal-access"></i> --><img src="assets/modules/menu-left//icons/finance.png"></span>
+                    Finance And Collections
+                </a>
             </li>
 
             <li class="cat__menu-left__item cat__menu-left__list--root" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/product-edit']">
-                            <span class="cat__menu-left__icon"><i class="fa fa-2x fa-universal-access"></i></span>
-                            Plans
-                        </a>
+                <a [routerLink]="['ecommerce/product-edit']">
+                    <span class="cat__menu-left__icon"><!-- <i class="fa fa-2x fa-universal-access"></i> --><img src="assets/modules/menu-left//icons/plans.png"></span>
+                    Plans
+                </a>
             </li>
 
             <li class="cat__menu-left__item cat__menu-left__list--root" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/products-list']">
-                            <span class="cat__menu-left__icon"><i class="fa fa-2x fa-headphones"></i></span>
-                            Help Center
-                        </a>
+                <a [routerLink]="['ecommerce/products-list']">
+                            <span class="cat__menu-left__icon"><!-- <i class="fa fa-2x fa-headphones"></i> -->
+                                <img src="assets/modules/menu-left//icons/help-line.png">
+                            </span>
+                    Help Center
+                </a>
             </li>
 
             <li class="cat__menu-left__item cat__menu-left__list--root" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/orders']">
-                            <span class="cat__menu-left__icon"><i class="fa fa-2x fa-address-book"></i></span>
-                            More Activities
-                        </a>
+                <a [routerLink]="['ecommerce/orders']">
+                            <span class="cat__menu-left__icon"><!-- <i class="fa fa-2x fa-address-book"></i> -->
+                                <img src="assets/modules/menu-left//icons/more.png">
+                            </span>
+                    More Activities
+                </a>
             </li>
 
-           
+
         </ul>
     </div>
 </nav>

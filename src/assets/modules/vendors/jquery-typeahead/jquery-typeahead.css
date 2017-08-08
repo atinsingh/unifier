@@ -44,7 +44,7 @@
 }
 
 .typeahead__container .typeahead__result .typeahead__list .typeahead__item strong {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .typeahead__container.result .typeahead__result {

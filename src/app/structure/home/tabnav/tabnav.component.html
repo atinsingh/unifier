@@ -2,27 +2,27 @@
     <div class="col-lg-8">
         <ul class="nav nav-tabs">
 
-          <li class="nav-item">
-            <a class="nav-link"  routerLinkActive="active_link"  [routerLink]="[accountId]">
-              <span class="fa fa-user-o"></span>
-              Customer
-            </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link"  routerLinkActive="active_link"  [routerLink]="[accountId]">
+                    <!-- <span class="fa fa-user-o"></span> --><span class="nav-link-icon-first"><img src="assets/modules/menu-left//icons/user.png"></span>
+                    Customer
+                </a>
+            </li>
 
-          <li class="nav-item">
-            <a class=" nav-link" routerLinkActive="active_link"   [routerLink]="['payment', accountId]">
-              <span class="fa fa-credit-card"></span>
-              Payment
-            </a>
-          </li>
+            <li class="nav-item">
+                <a class=" nav-link" routerLinkActive="active_link"   [routerLink]="['payment', accountId]">
+                    <!-- <span class="fa fa-credit-card"></span> --><span class="nav-link-icon"><img src="assets/modules/menu-left//icons/payment.png"></span>
+                    Payment
+                </a>
+            </li>
 
-          <li class="nav-item">
+            <li class="nav-item">
 
-            <a disabled="" class="nav-link" [routerLinkActive]="active_link"  >
-              <span class="fa fa-plus-square-o"></span>
-              Add aceessory
-            </a>
-          </li>
+                <a disabled="" class="nav-link" [routerLinkActive]="active_link"  >
+                    <!--   <span class="fa fa-plus-square-o"></span> --><span class="nav-link-icon"><img src="assets/modules/menu-left//icons/add.png"></span>
+                    Add aceessory
+                </a>
+            </li>
 
         </ul>
     </div>

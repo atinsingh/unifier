@@ -1,8 +1,11 @@
 .account-details {
-    padding: 1rem 1rem 0rem 1rem;
-    line-height: 2.4rem;
-    color: #a0a3a5;
+    padding: 1rem 0rem 0rem 1rem;
+    line-height: 2.6rem;
+    color: #ABA8B1;
 }
+/*.account-details:first-child{
+	border-right: 1px solid #ABA8B1;
+}*/
 .cat__core__sortable__control{
     color: #0a0a0a;
 }
@@ -11,6 +14,14 @@
     padding-bottom: 0rem;
 
 }
+.col.long-text-fix{
+
+}
 .left-title{
-    color: #0a0a0a;
+    color: #0D1E32;
+    max-width: 160px;
+}
+
+strong{
+    font-weight: 500;
 }

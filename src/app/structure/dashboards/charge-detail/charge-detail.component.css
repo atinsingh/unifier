@@ -1,0 +1,46 @@
+.total-charges{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #ABA8B1;
+    border-bottom: 0.05rem solid #D8D8D8;
+    margin: 0.5rem 0 1rem 0;
+    text-align: center;
+    padding: 0 0 1rem 0;
+
+}
+.total-details-icon{
+    float: left;
+    margin: 1.45rem .7rem 0 0;
+}
+
+.charge-item-number{
+    color: #4990E2;
+    font-weight: 400;
+
+}
+.total-details-header{
+    color: #ABA8B1;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-bottom: -0.2rem;
+}
+.total-details-number{
+    color: #4990E2;
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.charge-item{
+    color: #ABA8B1;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-align: left;
+}
+.row{
+    border-left: 0.05rem solid #ABA8B1;
+    padding: 1rem;
+    /*margin-left: 0rem;*/
+}
+

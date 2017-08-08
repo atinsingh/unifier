@@ -1,5 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {RoundProgressConfig} from "angular-svg-round-progressbar";
 import {AccountService} from "../../../shared/account.service";
+
+
 declare var $: any;
 declare var jQuery: any;
 
@@ -11,7 +14,16 @@ declare var jQuery: any;
 })
 export class AllowanceDetailComponent implements OnInit {
 
-  constructor(private accountService:AccountService) { }
+  current:number = 85;
+  max:number = 100;
+  constructor(private accountService:AccountService, private config:RoundProgressConfig) {
+      this.config.setDefaults({
+         //background: '#2196f3',
+         // background: '-webkit-linear-gradient(to right, #f44336, #2196f3)',
+         // background: 'linear-gradient(to right, #f44336, #2196f3)',
+
+  })
+  }
 
   allowance;
 
@@ -19,19 +31,13 @@ export class AllowanceDetailComponent implements OnInit {
       this.accountService.getSelectedAllowancePeriod().subscribe(
           (allowance)=>{
               this.allowance = allowance;
-              this.updateChart();
+
           }
       );
 
   }
 
-  updateChart(){
-
-          $("#circle").circliful({
-              animationStep: 5,
-              foregroundBorderWidth: 5,
-              backgroundBorderWidth: 12,
-              percent: 85
-          });
-   }
+  updateCircle(){
+      this.allowance
+  }
 }

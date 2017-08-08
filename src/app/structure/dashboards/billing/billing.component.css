@@ -7,19 +7,29 @@
 }
 
 .card-block{
-    padding: 1rem 1rem 0rem 1rem;
+    padding: 1rem 1rem 0rem 0rem;
     background:#ffffff;
     line-height: 2.3rem;
 }
+.card-header{
+    border-bottom: 1px solid #D8D8D8;
+    padding-left: 0px;
+}
 .card{
     border: none;
-    color: #a0a3a5;
+    color: #ABA8B1;
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 0 26px 0;
+
+}
+strong{
+    font-weight: 500;
 }
 
-
 .left-title {
-    font-weight: bold;
-    color: #0a0a0a;
+    color: #0D1E32;
+    max-width: 200px;
 }
 .moredetails{
     margin-left: 1.4rem;

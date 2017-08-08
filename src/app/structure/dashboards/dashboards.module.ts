@@ -14,6 +14,8 @@ import { AllowancesComponent } from './allowances/allowances.component';
 import { AllowanceDetailComponent } from './allowance-detail/allowance-detail.component';
 import { ChargesComponent } from './charges/charges.component';
 import { ChargeDetailComponent } from './charge-detail/charge-detail.component';
+import {RoundProgressModule} from "angular-svg-round-progressbar";
+
 
 
 export const routes: Routes = [
@@ -24,6 +26,7 @@ export const routes: Routes = [
   imports: [
       CommonModule,
       PopoverModule,
+      RoundProgressModule,
       RouterModule.forChild(routes)
   ],
   declarations: [

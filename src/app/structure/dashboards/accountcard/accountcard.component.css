@@ -9,11 +9,13 @@
 .card {
     padding: 5px;
     background-color: #F8F8F8;
+    margin-bottom: 1.35em;
+    border-radius: 0;
 }
 
 .card-block {
     padding-top: 0;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.7rem;
 }
 
 .cat__core__sortable__collapse,.cat__core__sortable__uncollapse{
@@ -21,20 +23,39 @@
 }
 
 .no-gutters > .col, .no-gutters > [class*="col-"]{
-    border: 1px solid #f9f9f9;
     background-color: #fff;
+    border-right: 1px solid #E7E7E7;
+}
+
+.no-gutters > .col, .no-gutters > [class*="col-"]:last-child{
+    background-color: #fff;
+    border-right: 0px solid #E7E7E7;
+}
+
+.no-gutters {
+    border: 1px solid #E7E7E7;
 }
 
 .text-black{
     line-height: 15px;
+    font-size: 1.1em;
+
 }
 .cat__content{
-    background-color: white;
+    background-color: white !important;
 }
 
 .bold-text{
-    font-weight: 800;
+    font-weight: 500;
+}
+strong{
+    font-weight: 500;
 }
 .m5{
     margin-right: 0.3rem;
+}
+
+.card-header:first-child{
+    font-size: 12px;
+
 }

@@ -1,17 +1,18 @@
 .col-charges{
-    margin-left: 0.3rem;
+    margin-left: 5rem;
     margin-right: 0.3rem;
-    border-right: 2px solid silver;
+    border-right: 1px solid #d3d3d3;
+
 }
 .col-charges:last-child{
     border-right:none ;
 }
 .col-charges > .title {
-    color: #4f4f4f;
+    color: #9b9b9b;
     font-size: 0.8rem;
 }
 .table {
-    font-size: 0.8rem;;
+    font-size: 0.8rem;
 }
 .card-header{
 
@@ -21,16 +22,22 @@
 }
 .card {
     padding: 1.25rem;
-    background-color: #F8F8F8;;
+    background-color: #F8F8F8;
+    border-radius: 0;
+    margin-bottom: 1.35em;
 }
 .card-block {
     padding: 0rem;
     padding-top: 0.5rem;
-    background-color: #F8F8F8;;
+    background-color: #F8F8F8;
 }
 
 .card-header{
     background: #fff;
+    border: 1px solid #E7E7E7;
+    margin: 0;
+    padding: 10px 0 8px 0;
+
 }
 .cat__core__sortable__collapse,.cat__core__sortable__uncollapse{
     color: #0a0a0a;
@@ -42,10 +49,31 @@
 
 .col-charges .currency-big {
     color: #4990E2;
-    font-size: 2rem;
-    font-stretch: ultra-condensed;
+    font-size: 1.9rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
 }
 .align-text-bottom{
-  margin-right: 0px;
+    margin-right: 0px;
     padding-right: 0;
+}
+
+.equip_title {
+    font-size: 0.9rem;
+    color: #2b2e39;
+    position: relative;
+    top: 1.5em;
+}
+
+.title-total{
+    font-size: 0.9rem;
+    color: #2b2e39;
+    position: relative;
+    top: 2.4em;
+    float: right;
+    right: -5em;
+
+}
+.mb-5{
+    margin-bottom: -1rem !important;
 }

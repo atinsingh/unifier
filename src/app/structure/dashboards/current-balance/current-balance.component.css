@@ -4,15 +4,16 @@
 
 .card-block {
     padding: 1.5rem;
+    line-height: 2.0rem;
 }
 
 .card {
     border: none;
-    color: #a0a3a5;
+    color: #aba8b1;
 }
 .divider {
-    height: 0.1rem;
-    background: darkgray;
+    height: 0.01rem;
+    background: #aba8b1;
     width: 75%;
     margin: 0 auto;
     padding-left: 2rem;
@@ -20,24 +21,27 @@
 
 }
 .balance{
-    font-size: 2rem;
     color: #4990E2;
-    margin-left: 0px;
+    font-size: 1.9rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
 }
 .fa-credit-card{
-    float: left;
     transform: rotate(-45deg);
-    margin: 1rem 0rem 1rem 1.5rem;
-    font-size: 3rem;
-    -webkit-box-shadow: -1px 20px 17px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 20px 17px -6px rgba(0,0,0,0.75);
-    box-shadow: -1px 20px 17px -6px rgba(0,0,0,0.75);
+    position: relative;
+    top: 0px;
+    left: -8px;
+    font-size: 21px;
+
 }
 .curr-bal{
     padding: 0.6rem;
     color: #a0a3a5;
 }
 .balance-due-date{
-   color: #4990E2;
-   font-size: 2rem;
+    color: #4990E2;
+    font-size: 1.9rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+
 }
