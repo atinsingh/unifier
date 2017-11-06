@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {AccountService} from "../../shared/account.service";
+import {ActivatedRoute, Params} from "@angular/router";
+import {error} from "util";
 declare var $: any;
 declare var jQuery: any;
 
@@ -10,7 +13,42 @@ declare var Ladda: any;
 })
 
 export class Dashboard implements OnInit {
-  ngOnInit() {
+
+    customerId;
+    customerData;
+
+    constructor(private accountService:AccountService, private route : ActivatedRoute){
+
+    }
+
+    ngOnInit() {
+
+        // this.route.params.debounceTime(1000).switchMap(
+        //     (params:Params)=>{
+        //         this.accountService.updateAccountID(params['id']);
+        //         return this.accountService.retrieveCustomerByAccount(params['id']);
+        //
+        //     }
+        // ).subscribe(
+        //     (response)=>{
+        //         this.customerData = response;
+        //         console.log(response);
+        //     },
+        //     error => {
+        //         console.log("This is the response I got for 404");
+        //     }
+        // );
+
+        this.route.params.subscribe(
+            (params: Params) => {
+                console.log("Logging change in param" + params['id']);
+                this.customerId = +params['id'];
+                this.accountService.updateAccountID(this.customerId);
+                this.updateCard();
+            }
+        );
+
+
 
     $( function() {
 
@@ -124,6 +162,23 @@ export class Dashboard implements OnInit {
       
     } );
 
-  }
+    }
+
+    updateCard()
+    {
+        console.log("Customer Id being searched"+this.customerId);
+        this.accountService.retrieveCustomerByAccount(this.customerId).subscribe(
+            (response) => {
+                console.log("Got Response from Local Server"+ response) ;
+                this.customerData = response;
+                this.accountService.updateCustomerData(this.customerData);
+            },
+            (error) => {
+                console.log("This is the reponse I got for 404");
+            }
+        );
+
+    }
+
 }
 

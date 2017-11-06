@@ -15,7 +15,7 @@ export class CurrentBalanceComponent implements OnInit {
       console.log("current billlingLoaded");
     this.accountService.getBillingData().subscribe(
         (billingData)=>{
-           console.log("Current Balance Component " + JSON.stringify(billingData));
+           // console.log("Current Balance Component " + JSON.stringify(billingData));
            this.billingData = billingData;
         }
     )

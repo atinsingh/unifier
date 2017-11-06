@@ -11,38 +11,50 @@
             <!--</form>-->
     <!--</div>-->
 <!--</div>-->
-<div class="panel vertical-center">
-    <div class="container ">
+<div class="panel">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 col-xs-12">
                 <div id="imaginary_container">
-                    <form (submit)="updateSearchTerm()">
-                        <div class="input-group stylish-input-group">
-                            <input #searchTerm type="text" class="form-control"  placeholder="Search" />
-                            <span class="">
-                                    <button (click)="updateSearchTerm()" class="search-button" type="submit">
-                                        SEARCH
-                                    </button>
-                            </span>
-                        </div>
-                    </form>
+                    <!--<form [formGroup]="searchForm">-->
+                        <!--<div class="input-group stylish-input-group">-->
+                            <!--<input formControlName="search"  value="{{searchTerm}}" (focus)="onFocus()" (focusout)="onFocusOut()"  type="text" class="form-control"   placeholder="Search" />-->
+                            <!--<span class="">-->
+                                    <!--<button  class="search-button" type="">-->
+                                        <!--SEARCH-->
+                                    <!--</button>-->
+                            <!--</span>-->
+                        <!--</div>-->
+                        <!--<div class="dropdown" [class.open]="!autoHide.hide">-->
+                        <!--<ul *ngIf="searchData.length" class="dropdown-menu"  >-->
+                            <!--<li  *ngFor="let searchObj of searchData " class="dropdown-item" (click)="onSelectAccount(searchObj)">-->
+                                <!--Last Name : {{searchObj.last_name}}-->
+                                <!--|-->
+                                <!--Account Number : {{searchObj.fa_account}}-->
+                                <!--|-->
+                                <!--Customer ID : {{searchObj.customer_id}}-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                <app-search [enableButton]="true"></app-search>
                 </div>
             </div>
+
         </div>
     <br>
-    <div class="align-middle" style="background: whitesmoke">
-        <div class="row card-group">
-            <div class="card text-center">
+    <div class="icon-container">
+            <div class="card text-center disabled" >
                 <div class="icon" >
-                   <span class="lnr lnr-user fa-4x" ></span>
+                   <span class="lnr lnr-user fa-x" ></span>
                 </div>
                 <div class="icon-text">
                     Register a new Customer
                 </div>
             </div>
-            <div class="card text-center">
+            <div class="card text-center disabled">
                 <div class="icon" >
-                    <span class="lnr lnr-smartphone fa-4x"></span>
+                    <span class="lnr lnr-smartphone fa-x"></span>
                 </div>
                 <div class="icon-text">
                     Upgrade
@@ -51,16 +63,16 @@
 
             <div class=" card text-center disabled">
                 <div class="icon" >
-                    <span class="lnr lnr-gift fa-4x"></span>
+                    <span class="lnr lnr-gift fa-x"></span>
                 </div>
                 <div class="icon-text">
                     Change Plan
                 </div>
             </div>
 
-            <div class="card text-center">
+            <div class="card text-center ">
                 <div class="icon" >
-                    <i class="fa fa-cc-visa fa-4x"></i>
+                    <i class="fa fa-cc-visa fa-x"></i>
                 </div>
                 <div class="icon-text">
                     Payment

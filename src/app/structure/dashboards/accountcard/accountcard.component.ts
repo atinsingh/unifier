@@ -1,6 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {AccountService} from "../../../shared/account.service";
-import {ActivatedRoute, Params} from "@angular/router";
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from "rxjs/Subscription";
 
 
@@ -11,48 +9,21 @@ import {Subscription} from "rxjs/Subscription";
 })
 export class AccountcardComponent implements OnInit, OnDestroy {
 
-  customerId:number|string ;
 
   subscribe : Subscription;
 
-  customerData = {}
+  @Input() customerData;
 
-  constructor(private accountService:AccountService, private route : ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit() {
-      this.route.params.subscribe(
-          (params:Params)=>{
-            console.log("Logging change in param" + params['id']);
-            this.customerId = +params['id'];
-            this.accountService.updateAccountID(this.customerId);
-
-            this.updateCard();
-          }
-      );
-
-      this.subscribe = this.accountService.getAccountID().subscribe(
-          id=>{
-              this.customerId = id;
-          }
-      );
-
-      this.updateCard();
-
 
   }
 
-  updateCard(){
-      this.accountService.retrieveCustomerByAccount().subscribe(
-          (response)=>{
-              console.log("Got Response from Local Server"+ JSON.stringify(response.json())) ;
-              this.customerData = response.json();
-          }
-      );
 
-  }
 
   ngOnDestroy(){
-      this.subscribe.unsubscribe();
+
   }
 
 }

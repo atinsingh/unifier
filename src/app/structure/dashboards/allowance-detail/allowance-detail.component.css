@@ -67,3 +67,19 @@ ul.list{
 	border-left: 0rem solid #D8D8D8;
 }
 */
+
+#circle::after {
+    content: "100";
+    line-height: 2rem;
+    position: absolute;
+    top:20px;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+}
+
+.chart svg {
+    width: 150px;
+}

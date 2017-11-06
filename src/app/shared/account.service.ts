@@ -2,6 +2,10 @@ import {Subject} from "rxjs/Subject";
 import {Http} from "@angular/http";
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
+import 'rxjs';
+
+import {Config} from "../config/app.config";
+import {CustomerModel} from "../models/customer.model";
 
 @Injectable()
 export class AccountService {
@@ -11,16 +15,19 @@ export class AccountService {
      * @type {Subject<number>}
      */
 
+    /**
+     * These URL should come from config
+     * @type {Subject<number>}
+     */
+
+
+
     private accountSubject = new Subject<number>();
-
+    private customerData:CustomerModel ;
     private selectedAccount:number;
-
     private billingSubject:Subject<any> = new Subject<any>();
-
     private selectedMDn = new Subject();
-
     private allowancePeriod = new Subject();
-
     private  chargePeriod = new Subject();
 
 
@@ -28,17 +35,18 @@ export class AccountService {
         this.accountSubject.subscribe((accountId)=>{this.selectedAccount=accountId});
     }
 
-    retrieveCustomerByAccount() {
-        console.log("Inside the service");
-        return this.http.get('http://localhost:2020/customer/'+this.selectedAccount);
+    retrieveCustomerByAccount(accountid) {
+        console.log("Calling Every this with following "+ Config.accountURL+accountid);
+        return this.http.get(Config.accountURL+accountid)
+            .map(response => response.json());
     }
 
-    getSelectedAccount(){
-        return this.selectedAccount;
-    }
-    setSelectedAccount(accountID){
-        this.selectedAccount = accountID;
-    }
+    // getSelectedAccount(){
+    //     return this.selectedAccount;
+    // }
+    // setSelectedAccount(accountID){
+    //     this.selectedAccount = accountID;
+    // }
 
     getAccountID(): Observable<any> {
         return this.accountSubject.asObservable();
@@ -131,6 +139,14 @@ export class AccountService {
 
     getSelectChargePeriod(){
         return this.chargePeriod.asObservable();
+    }
+
+    updateCustomerData(customerData:CustomerModel){
+        this.customerData = customerData;
+    }
+
+    getCustomerData():CustomerModel{
+        return this.customerData;
     }
 
 }

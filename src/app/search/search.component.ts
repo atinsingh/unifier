@@ -1,23 +1,20 @@
-import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-import {Router} from "@angular/router";
-import {SearchService} from "../shared/search.service";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {SearchData} from "../models/searchdata.model";
+import {SearchService} from "../shared/search.service";
+import {Router} from "@angular/router";
 
 @Component({
-  selector: 'search-bar',
-  templateUrl: './searchbar.component.html',
-  styleUrls: ['./searchbar.component.css'],
-  host : {
-      '(focus)': 'onFocus()',
-      '(blur)': 'onBlur()'
-  }
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
 })
-export class SearchbarComponent implements OnInit {
+export class SearchComponent implements OnInit {
+
     @Input() enableButton:boolean = false;
     searchTerm :string;
 
-    searchHome:boolean = false;
+    @Input() searchPage:boolean = false;
 
 
     //Switching to Forms now
@@ -39,9 +36,7 @@ export class SearchbarComponent implements OnInit {
         // Observe the change in the serch bar and then do the search every 1000 ms
         // populate back the drop down with search result.
 
-        this.searchService.getHomeSearch().subscribe(
-            (home)=>{this.searchHome = home}
-        );
+        this.searchService.updateHomeSearch(true)
 
         this.searchField.valueChanges.debounceTime(1000).switchMap(
             (term)=> {
@@ -70,11 +65,6 @@ export class SearchbarComponent implements OnInit {
         }else{
             this.autoHide.hide = true;
         }
-        
-    }
-
-    onBlur(){
-
     }
 
     onFocusOut(){
@@ -91,4 +81,6 @@ export class SearchbarComponent implements OnInit {
     onClick(){
         console.log("Item Selected");
     }
+
+
 }

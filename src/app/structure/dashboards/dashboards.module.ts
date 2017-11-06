@@ -19,7 +19,8 @@ import {RoundProgressModule} from "angular-svg-round-progressbar";
 
 
 export const routes: Routes = [
-  { path: 'dashboard', component: Dashboard  }
+  { path: 'dashboard', redirectTo:'unifier/home' , pathMatch:'full'  },
+  { path: 'dashboard/:id', component:Dashboard  }
 ];
 
 @NgModule({

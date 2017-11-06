@@ -7,15 +7,20 @@ import { TabnavComponent } from './tabnav/tabnav.component';
 import {Dashboard} from "../dashboards/dashboard.page";
 import { PaymentComponent } from './payment/payment.component';
 import { HomesearchComponent } from './homesearch/homesearch.component';
+import {CanActivateRoute} from "../../shared/canactivate.route";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {SearchModule} from "../../search/search.module";
+import {AutogrowDirective} from "../../autogrow.directive";
+
 
 
 
 export const routes: Routes = [
-    {path : 'unifier/home', component:HomesearchComponent, pathMatch:'full'},
-    { path: 'unifier/home/dashboard', component: HomeComponent,
+    {path : 'unifier/home', component:HomesearchComponent, pathMatch:'full', canActivate:[CanActivateRoute]},
+    { path: 'unifier/home/dashboard', component: HomeComponent, canActivate:[CanActivateRoute],
         children : [
             {path:':id', component:Dashboard},
-            {path :'payment/:id' , component:PaymentComponent}
+            {path :':id/payment' , component:PaymentComponent}
         ]
     },
 
@@ -27,13 +32,22 @@ export const routes: Routes = [
         TabnavComponent,
         PaymentComponent,
         HomesearchComponent
+
     ],
   imports: [
 
       CommonModule,
       RouterModule.forChild(routes),
-      DashboardsModule
-  ]
+      DashboardsModule,
+      FormsModule,
+      ReactiveFormsModule,
+      SearchModule
+  ],exports :[
+
+    ],
+    providers:[
+        CanActivateRoute
+    ]
 
 })
 

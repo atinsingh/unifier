@@ -12,8 +12,12 @@ declare var jQuery: any;
 })
 export class EquipmentComponent implements OnInit, AfterViewInit {
 
+    equipmentJson;
 
-  constructor(private accountService:AccountService) { }
+    datatable;
+
+
+    constructor(private accountService:AccountService) { }
 
 
 
@@ -42,9 +46,6 @@ export class EquipmentComponent implements OnInit, AfterViewInit {
     }
 
 
-  equipmentJson;
-
-  datatable;
 
   ngOnInit() {
         this.accountService.retrieveEquipment().subscribe(
@@ -53,7 +54,7 @@ export class EquipmentComponent implements OnInit, AfterViewInit {
                 this.onSelectMdn(this.equipmentJson[0].mdn);
                 this.prepDataArray();
                 this.initDataTable();
-                 console.log(" This is the data array "+ JSON.stringify(this.data));
+                 // console.log(" This is the data array "+ JSON.stringify(this.data));
             }
         );
 
@@ -65,7 +66,6 @@ export class EquipmentComponent implements OnInit, AfterViewInit {
 
   }
   onSelectMdn(selectedMdn){
-      console.log("Selected MDN "+selectedMdn);
       this.accountService.updateMdn(selectedMdn);
   }
 
@@ -84,7 +84,7 @@ export class EquipmentComponent implements OnInit, AfterViewInit {
               { data: 'device_description' },
               { data: 'ric_start_date' },
               { data: 'ric_end_date' },
-              {data: 'ric_monthly_fee'},
+              { data: 'ric_monthly_fee'},
               { data: 'ric_balance' },
               { data: 'protection_plan_charges' },
               { data: 'upgrade_eligiblity_date' },

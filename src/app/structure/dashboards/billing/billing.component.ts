@@ -29,8 +29,8 @@ export class BillingComponent implements OnInit {
       this.accountService.retrieveBillingData().subscribe(
           (response)=>{
               this.billingData = response.json();
-              console.log("Got Billing Data"+JSON.stringify(response.json()));
-              this.addPopover(this.billingData);
+              // console.log("Got Billing Data"+JSON.stringify(response.json()));
+              // this.addPopover(this.billingData);
               this.accountService.updateBilling(this.billingData);
           }
       );

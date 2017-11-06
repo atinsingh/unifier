@@ -59,3 +59,10 @@ strong{
     font-size: 12px;
 
 }
+
+@media (max-width: 32em) {
+    .card-block {
+        padding: 0;
+
+    }
+}

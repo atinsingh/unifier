@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {AccountService} from "../../../shared/account.service";
 
 @Component({
@@ -8,8 +8,8 @@ import {AccountService} from "../../../shared/account.service";
 })
 export class AllowancesComponent implements OnInit {
    mdn;
-
    allowances;
+   selectAllowance;
 
    constructor(private  accountSevice:AccountService) { }
 
@@ -20,9 +20,9 @@ export class AllowancesComponent implements OnInit {
             this.accountSevice.retrieveAllowance(mdn).subscribe(
                 (response)=>{
                     this.allowances = response.json();
-                    console.log("Got following from allowances"+ JSON.stringify(response.json()));
-                    this.accountSevice.updateAllowancePeriod(this.allowances[0]);
-                }
+                    // console.log("Got following from allowances"+ JSON.stringify(response.json()));
+                    this.selectAllowancePeriod(this.allowances[0]);
+                 }
             )
         }
     );
@@ -30,6 +30,7 @@ export class AllowancesComponent implements OnInit {
 
     selectAllowancePeriod(allowance){
        this.accountSevice.updateAllowancePeriod(allowance);
+       this.selectAllowance = allowance;
     }
 
 }

@@ -1,22 +1,24 @@
-<div class="card">
+<div *ngIf="customerData" class="card">
     <div class="card-header">
         <h6 class="mb-0 text-black">
                  <span class="bold-text">
-                      <span class="m5"> Payment to Account </span>
-                      <span class="m5">{{customerData.firstname}}  {{customerData.lastname}} |</span>
-                      <span class="m5">{{customerData.contactNumber}}</span>
+                     <span class="m5"> Payment to Account :  </span>
+                     <span class="blue-txt">
+                          <span class="m5">{{customerData.firstname}}  {{customerData.lastname}} |</span>
+                          <span class="m5">{{customerData.contactNumber}}</span>
+                     </span>
                   </span>
         </h6>
     </div>
     <div class="card-block">
-                           <form  novalidate="novalidate">
+                           <form  [formGroup]="paymentForm" novalidate="novalidate">
                                 <div class="row">
                                 <div class="col-6 col-lg-6 card_data">
                                 <!--select the type of payment and change the view below-->
 
                                 <div class="form-group row has-success">
-                                    <label for="cc-name" class="control-label col-5">Name on card</label>
-                                    <select disabled id="payment_type" class="custom-select col-7" name="payment_type-name">
+                                    <label for="cc-name" class="control-label col-5">Payment Method</label>
+                                    <select disabled id="payment_type" class="custom-select col-7" name="payment_method">
                                         <option selected value="credit">Credit Card</option>
                                         <option  value="cash">Cash</option>
                                         <option  value="credit">Cheque</option>
@@ -41,7 +43,7 @@
                                 <!---->
                                 <div class="form-group row ">
                                     <label for="cc-name" class="control-label col-5">Name on card</label>
-                                    <input id="cc-name" name="cc-name" type="text" class="form-control col-7 cc-name valid" data-val="true" data-val-required="Please enter the name on card" autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                                    <input formControlName="cc-name" id="cc-name" name="cc-name" type="text" class="form-control col-7 cc-name valid" data-val="true" data-val-required="Please enter the name on card" autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
                                     <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
                                 </div>
 

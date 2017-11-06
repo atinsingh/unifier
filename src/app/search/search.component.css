@@ -1,0 +1,40 @@
+.search-button {
+    background: #4990E2;;
+    padding-left : 3rem;
+    padding-right: 3rem;
+    border: 0.1rem solid #0b3e6f;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font: Roboto, "Helvetica Neue", Helvetica, Arial;
+    color:white;
+
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    border-color: #d2d9e5;
+    top: 100%;
+    padding: 0.57rem 0;
+    width: 100%;
+    z-index: 99000 !important;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 0.5rem;
+    border-bottom: 1px dashed #e1e1e8;
+    cursor: pointer;
+
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #94878a;
+    color: #0b3e6f;
+}
+
+.dropdown-menu .dropdown-item:last-child {
+    border-bottom: none
+}

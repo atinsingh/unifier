@@ -11,13 +11,13 @@
   </div>
   <div class="card-block" *ngIf="allowances" >
   <div class="row no-gutters">
-    <div class="col-lg-4 col-xs-12">
+    <div class="col-lg-3 col-xs-12">
       <div class="allowances" *ngFor = "let allowance of allowances">
         <div style="cursor: pointer" (click)="selectAllowancePeriod(allowance)" class="list">{{allowance.start_date}}-{{allowance.end_date}}</div>
       </div>
     </div>
-    <div class="col-lg-8 col-xs-12">
-      <app-allowance-detail></app-allowance-detail>
+    <div class="col-lg-9 col-xs-12">
+      <app-allowance-detail [allowance]="selectAllowance"></app-allowance-detail>
     </div>
   </div>
   </div>

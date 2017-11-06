@@ -1,14 +1,14 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
-import {SearchComponent} from "./structure/search/search/search.component";
-import {HomeComponent} from "./structure/home/home/home.page";
-import {Dashboard} from "./structure/dashboards/dashboard.page";
-import {PaymentComponent} from "./structure/home/payment/payment.component";
+import {RetriveComponent} from "./structure/search/search/retrieve.component";
+import {LoginComponent} from "./login/login.component";
+import {CanActivateRoute} from "./shared/canactivate.route";
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'unifier/home', pathMatch: 'full' },
+    { path:'login', component:LoginComponent },
+    { path: '', redirectTo: 'unifier/home', pathMatch: 'full', canActivate:[CanActivateRoute] },
     { path: '**', redirectTo: 'pages/page-404' },
-    { path: 'search/:term', component: SearchComponent  }
+    { path: 'search/:term', component: RetriveComponent  }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes, { useHash: false });

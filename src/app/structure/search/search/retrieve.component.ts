@@ -7,10 +7,10 @@ import {AccountService} from "../../../shared/account.service";
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  templateUrl: './retrieve.component.html',
+  styleUrls: ['./retrieve.component.css']
 })
-export class SearchComponent implements OnInit {
+export class RetriveComponent implements OnInit {
 
     term :string|number;
     searchObj : {}|false;

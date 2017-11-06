@@ -1,0 +1,20 @@
+<form [formGroup]="searchForm">
+  <div class="input-group stylish-input-group">
+    <i *ngIf="!enableButton"  class="icmn-search"><!-- --></i>
+    <input formControlName="search"  value="{{searchTerm}}" (focus)="onFocus()" (focusout)="onFocusOut()"  type="text" class="form-control"   placeholder="Search" />
+    <span *ngIf="enableButton" class="">
+      <button  class="search-button" type=""> SEARCH</button>
+    </span>
+  </div>
+  <div class="dropdown" [class.open]="!autoHide.hide">
+    <ul *ngIf="searchData.length" class="dropdown-menu"  >
+      <li  *ngFor="let searchObj of searchData " class="dropdown-item" (click)="onSelectAccount(searchObj)">
+        Last Name : {{searchObj.last_name}}
+        |
+        Account Number : {{searchObj.fa_account}}
+        |
+        Customer ID : {{searchObj.customer_id}}
+      </li>
+    </ul>
+  </div>
+</form>
