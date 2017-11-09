@@ -6,3 +6,83 @@
     padding: 1rem;
     width: 100%;
 }
+
+.cat__pages__login__block {
+	font-family: 'Roboto', sans-serif;
+
+}
+.logo img{
+	height: 35px;
+	padding: 0;
+	margin: 1rem 0 1.3rem 0;
+}
+.cat__pages__login__block__sidebar[_ngcontent-c0] {
+    background-color: #4990E2;
+}
+
+.btn.btn-primary, .show > .btn.btn-primary {
+    background-color: #4990E2;
+    border-color: #4990E2;
+    padding: 0.7rem;
+    width: 60%;
+    border-radius: 2px !important;
+}
+.request-access-item button{
+	padding: 0.6rem 0.6rem;
+	border: 1px solid white;
+	background-color: #4990E2;
+	color: #fff;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+}
+.header .cat__core__link--blue{
+	color: white;
+}
+.cat__core__link--blue{
+	display: block;
+	border-bottom: none;
+	margin: 10px 0 0 0;
+	color: #4990E2;
+	font-family: 'Roboto', sans-serif;
+}
+.form-actions{
+	border: none;
+}
+
+.cat__pages__login__block--extended .cat__pages__login__block__inner {
+    max-width: 57.14rem;
+    padding: 1rem 3rem 2rem;
+}
+
+.request-access-item .register-link{
+    display: block;
+    border-bottom: none;
+    text-transform: uppercase;   
+}
+
+.register-link .header{
+	font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 30px 0 21px 0;
+}
+
+.request-access-item[_ngcontent-c0] button[_ngcontent-c0] {
+    padding: 0.6rem 0.6rem;
+    border: 1px solid white;
+    background-color: #4990E2;
+    color: #fff;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    margin: 2rem 0 0 0;
+    font-weight: 100;
+}
+.btn.btn-primary[_ngcontent-c0]{
+	 font-weight: 100;
+}
+
+
+

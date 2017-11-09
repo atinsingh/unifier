@@ -25,3 +25,10 @@
 strong{
     font-weight: 500;
 }
+
+a.nav-link .nav-link-icon img{
+    margin: 10px 0 0 10px !important;
+}
+.reduce-font-size{
+    font-size: small;
+}

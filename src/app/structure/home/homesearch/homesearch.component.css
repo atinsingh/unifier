@@ -11,10 +11,13 @@ body {
 }
 
 #imaginary_container {
-    background-color: #f5f0e5;
-    padding: 0.8rem;
+    background-color: #f2f4f8;
+    padding: 2.3rem;
+    margin: 2.4rem;
 }
-
+#imaginary_container[_ngcontent-c2] {
+   
+}
 .stylish-input-group .input-group-addon{
     background: white !important;
 }
@@ -32,12 +35,12 @@ body {
 
 }
 .card{
-    padding: 1rem;
     width: 22%;
-    -webkit-box-shadow: 1px 3px 13px 0px rgba(0,0,0,0.33);
-    -moz-box-shadow: 1px 3px 13px 0px rgba(0,0,0,0.33);
-    box-shadow: 1px 3px 13px 0px rgba(0,0,0,0.33);
+    -webkit-box-shadow: 1px 3px 13px 0px rgba(0,0,0,0.12);
+    -moz-box-shadow: 1px 3px 13px 0px rgba(0,0,0,0.12);
+    box-shadow: 1px 3px 13px 0px rgba(0,0,0,0.12);
     color: #a0a3a5;
+    padding: 1rem 1rem 2rem 1rem !important;
 }
 
 .disabled {
@@ -53,7 +56,7 @@ body {
 
 .disabled:hover {
     cursor: not-allowed;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0,0,0,.12);
 }
 .vertical-center {
     margin-top: 15%;
@@ -62,7 +65,8 @@ body {
 }
 
 .icon {
-    padding: 1.5rem;
+    padding-top: 3.3rem;
+    padding-bottom: 1rem;
 }
 
 .icon-container {
@@ -74,8 +78,16 @@ body {
 
 
 .fa-x{
-    font-size: 4rem;
+    font-size: 2rem;
 }
+.icon-container {
+    background-color: #fff !important; 
+}
+.search-button{
+    margin: 0 0 0 0.5rem;
+    border: 0rem solid #0b3e6f !important;
+}
+
 
 @media only screen and (max-width: 71.25em) {
     .fa-x{

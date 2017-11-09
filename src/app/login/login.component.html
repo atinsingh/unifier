@@ -5,8 +5,8 @@
       <div class="col-xl-12">
         <div class="cat__pages__login__block__inner">
           <div class="cat__pages__login__block__form">
-            <h4 class="text-uppercase">
-              <strong>Please log in</strong>
+            <h4 class="text-uppercase"><div class="logo"><img src="assets/modules/core/img/logo-colour.png"></div>
+              <!-- <strong>Please log in</strong> -->
             </h4>
             <br />
             <form [formGroup]="loginForm" name="loginForm">
@@ -32,15 +32,18 @@
 
               <div class="form-actions">
                 <button type="submit" (click)="authorizeUser()" class="btn btn-primary mr-3">Sign In</button>
-                <span class="register-link">
-                                    <a href="" class="cat__core__link--blue cat__core__link--underlined">Register</a> if you don't have account
-                                </span>
+               <a href="" class="cat__core__link--blue header cat__core__link--underlined">Forgot password?</a> 
               </div>
 
             </form>
           </div>
           <div class="cat__pages__login__block__sidebar">
-              <img src="assets/modules/core/img/logo.png" />
+              <!-- <img src="assets/modules/core/img/logo.png" /> -->
+
+                <span class="register-link request-access-item">
+                    <a href="" class="header">NOT A MEMBER?</a> 
+                    <button value="Request Access">Request Access</button>
+                </span>
           </div>
         </div>
       </div>

@@ -12,26 +12,26 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "latest",
-    "@angular/compiler": "latest",
-    "@angular/core": "latest",
-    "@angular/forms": "latest",
-    "@angular/http": "latest",
-    "@angular/platform-browser": "latest",
-    "@angular/platform-browser-dynamic": "latest",
-    "@angular/router": "latest",
-    "@ng-bootstrap/ng-bootstrap": "latest",
+    "@angular/common": "4.2.6",
+    "@angular/compiler": "4.2.6",
+    "@angular/core": "4.2.6",
+    "@angular/forms": "4.2.6",
+    "@angular/http": "4.2.6",
+    "@angular/platform-browser": "4.2.6",
+    "@angular/platform-browser-dynamic": "4.2.6",
+    "@angular/router": "4.2.6",
+    "@ng-bootstrap/ng-bootstrap": "1.0.0-alpha.27",
     "angular-datatables": "^4.1.1",
     "angular-svg-round-progressbar": "^1.1.0",
-    "core-js": "latest",
+    "core-js": "2.4.1",
     "datatables.net-select": "^1.2.2",
     "ng2-popover": "0.0.14",
-    "rxjs": "latest",
-    "zone.js": "latest"
+    "rxjs": "5.3.3",
+    "zone.js": "0.8.12"
   },
   "devDependencies": {
-    "@angular/cli": "latest",
-    "@angular/compiler-cli": "latest",
+    "@angular/cli": "1.2.0",
+    "@angular/compiler-cli": "4.2.6",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0-beta.4",
@@ -44,8 +44,8 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-coverage-istanbul-reporter": "^0.2.0",
     "protractor": "~5.1.0",
-    "ts-node": "latest",
+    "ts-node": "3.2.0",
     "tslint": "~4.4.2",
-    "typescript": "latest"
+    "typescript": "2.4.0"
   }
 }

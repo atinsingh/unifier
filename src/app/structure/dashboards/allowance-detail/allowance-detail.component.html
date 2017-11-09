@@ -6,25 +6,28 @@
                     Allowances(GB)
                 </div>
                 <div class="chart" id="circle">
-                    <round-progress [radius]="75" [current]="current" [max]="max"></round-progress>
+                    <round-progress [radius]="75" [current]="current" [max]="max"
+                    [stroke]="3"
+                    [color]="'#4990e2'"
+                    [background]="'#F8F8F8'" ></round-progress>
                 </div>
             </div>
             <div class="col text-center">
                 <div class="bigblue-text">
-                    {{allowance.allowance}}
+                    {{allowance.allowance}}.00GB
                 </div>
                 <div>Used</div>
-                <div>{{allowance.used}}</div>
+                <div>{{allowance.used}}GB</div>
                 <div>Remained</div>
-                <div>{{allowance.remained}}</div>
+                <div>{{allowance.remained}}GB</div>
             </div>
         </div>
     </div>
     <div class="col-5">
         <ul class="list">
-            <li class="list-group list-group-item">OfferName <span class="redtext">{{allowance.offer_name}}</span> </li>
+            <li class="list-group list-group-item">Offer Name <br><span class="redtext no-space">{{allowance.offer_name}}</span> </li>
             <li class="list-group list-group-item">Remain days <span class="redtext">{{allowance.remained}}</span>  </li>
-            <li class="list-group list-group-item">Devices <span class="redtext"></span> </li>
+            <li class="list-group list-group-item">Devices <span class="redtext">3</span> </li>
             <li class="list-group list-group-item">Benefits/Rewards</li>
         </ul>
     </div>

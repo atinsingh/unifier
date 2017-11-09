@@ -6,17 +6,17 @@
       <!-- <i class="icmn-cross cat__core__sortable__close" data-toggle="tooltip" data-placement="left" title="" data-original-title="Remove"></i> -->
     </div>
     <span class="header_title">
-                <strong><span class="lnr lnr-smartphone"></span> CHARGES/CREDITS</strong> {{mdn}}
+                <strong><span class="lnr lnr-smartphone"></span> CHARGES/CREDITS  | </strong><span class="blue-txt"> {{mdn}}</span>
     </span>
   </div>
   <div class="card-block" *ngIf="charges" >
     <div class="row no-gutters">
-      <div class="col-lg-5 col-xs-12">
+      <div class="col-lg-6 col-xs-12">
         <div class="allowances" *ngFor = "let charge of charges">
           <div style="cursor: pointer" (click)="selectChargesPeriod(charge)" class="list">{{charge.start_date}}-{{charge.end_date}}</div>
         </div>
       </div>
-      <div class="col-lg-7 col-xs-12">
+      <div class="col-lg-6 col-xs-12">
         <app-charge-detail></app-charge-detail>
       </div>
     </div>

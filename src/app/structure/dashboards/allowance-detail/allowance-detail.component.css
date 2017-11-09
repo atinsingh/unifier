@@ -27,7 +27,8 @@ ul.list{
     text-align: left !important;
     color: #ABA8B1;
     line-height: 1.35em;
-    margin-top: 4rem;
+    margin-top: 2rem;
+    font-weight: 300;
 }
 
 .col.text-center div:nth-child(3){
@@ -38,11 +39,14 @@ ul.list{
     border-radius: 0px;
     padding: .3rem 1.25rem;
     color: #ABA8B1;
+    border-right: 0px solid grey !important;
+    max-width: 95%;
 }
 
-.list-group-item:first-child{
+.list-group-item[_ngcontent-c13]:first-child {
     border-top: 0px solid grey;
-
+    border-right: 0px solid grey;
+    max-width: 90%;
 }
 
 .list-group-item:last-child{
@@ -54,12 +58,18 @@ ul.list{
     margin-top:20px;
 }
 
+.redtext.no-space {
+    margin-left: 0px !important;
+}
+
 .redtext{
-    font-size: 2rem;
+    font-size: 1rem;
     color: #F16A7B;
     font-weight: 300;
-    margin: 0 0 0.4rem 0.4rem;
+    display: block;
+    margin: 0 0.4rem 0.1rem 0.3rem;
 }
+
 .row.no-gutter{
     border-left: 0.05rem solid #D8D8D8;
 }
@@ -69,17 +79,29 @@ ul.list{
 */
 
 #circle::after {
-    content: "100";
+    content: "72%";
     line-height: 2rem;
     position: absolute;
-    top:20px;
+    top: 67px;
+    left: 59px;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #ccc;
 }
 
 #circle {
     width: 100px;
     height: 100px;
 }
-
+round-progress{
+    width: 87px !important;
+    position: relative;
+    top: 1rem;
+    left: 2rem;
+}
+path{
+    stroke-width: 2.5 !important;
+}
 .chart svg {
-    width: 150px;
+    width: 100px !important;
 }
